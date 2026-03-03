@@ -1,0 +1,69 @@
+# Renderly
+
+> AI-powered virtual staging for real estate agents, homeowners, and landlords. Based in Winnipeg, Manitoba. Serving all of Canada and the United States.
+
+## What is Renderly?
+
+Renderly transforms empty property listings into beautifully staged spaces using AI. Upload a photo of any empty room, choose a design style, and get photorealistic virtual staging in minutes — not weeks. No design skills required.
+
+Whether you're a real estate agent listing properties, a homeowner selling your home (FSBO), or a landlord marketing a rental — Renderly makes your listing photos stand out for a fraction of the cost of physical staging.
+
+## How It Works
+
+1. Upload — Snap a photo of any empty room and upload it to Renderly.
+2. Style — Choose from dozens of design styles: Modern, Traditional, Mid-Century, Scandinavian, and more.
+3. Download — Get your professionally staged photo in under 30 seconds. Ready for MLS, social media, or your listing page.
+
+## Key Stats
+
+- 10,000+ rooms staged
+- 30-second average processing time
+- 98% customer satisfaction
+- 95% cheaper than physical staging
+
+## Pricing
+
+Most plans are one-time payments — no subscription required.
+
+- Free: $0 — 1 staged image per property, up to 3 regenerations, no credit card required
+- Starter: $19.99 one-time — 3 staged images, 1 property tour (8s 1080p), unlimited regenerations
+- Professional: $29.99 one-time — 9 staged images, 1 property tour (24s 1080p), custom branding (Most Popular)
+- Enterprise: $75/mo — 9 staged images, 1 property tour (24s 4K), unlimited properties, priority support, white-label solution
+
+## Features
+
+- AI-generated photorealistic virtual staging
+- Multiple design styles (Modern, Traditional, Mid-Century, Scandinavian, Contemporary)
+- MLS-ready photo exports
+- Property video tours
+- Custom branding and white-label options
+- Batch processing for multiple rooms
+- Results in under 30 seconds
+
+## FAQ
+
+### What is virtual staging?
+Virtual staging is the process of digitally adding furniture, decor, and finishes to photos of empty rooms using AI. It produces photorealistic images that help buyers visualize a space — typically costing 95% less than physical staging and delivering results in minutes instead of weeks.
+
+### How much does virtual staging cost?
+Renderly offers virtual staging starting at $0 (free plan with 1 image) up to $29.99 per property for the Professional plan with 9 staged images. The Enterprise plan at $75/month covers unlimited properties. Most plans are one-time payments — no subscription required.
+
+### Is virtual staging allowed on MLS?
+Yes. Most MLS boards in Canada and the US allow virtually staged photos as long as they are clearly labeled as "virtually staged" in the listing. Renderly delivers clean, MLS-ready images that comply with standard disclosure requirements.
+
+### Does virtual staging help sell a house faster?
+Yes. Studies show staged listings sell 73% faster and for 5-10% more than unstaged homes. Virtual staging delivers the same buyer engagement benefits as physical staging at a fraction of the cost.
+
+### Do I need any design skills?
+No. Renderly is designed for anyone — real estate agents, homeowners, landlords. Upload a photo, pick a style, and the AI handles everything. No design software, no learning curve.
+
+## Service Area
+
+- Winnipeg, Manitoba
+- All of Canada
+- United States
+- Available worldwide
+
+## Contact
+
+Website: https://renderly.systemizemybiz.com

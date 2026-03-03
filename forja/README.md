@@ -32,20 +32,20 @@ Abre 3 tabs en tu terminal. En cada una:
 
 **Tab 1 — Literal:**
 ```bash
-cd "/Users/carlosdominguez/Vibe Coding/sandbox-1"
-claude --dangerously-skip-permissions "$(cat "/Users/carlosdominguez/Vibe Coding/Demo/forja/prompts/sandbox-1-literal.md")"
+cd '/Users/carlosdominguez/Vibe Coding/sandbox-1'
+claude --dangerously-skip-permissions "$(cat '/Users/carlosdominguez/Vibe Coding/Demo/forja/prompts/sandbox-1-literal.md')"
 ```
 
 **Tab 2 — Creativo:**
 ```bash
-cd "/Users/carlosdominguez/Vibe Coding/sandbox-2"
-claude --dangerously-skip-permissions "$(cat "/Users/carlosdominguez/Vibe Coding/Demo/forja/prompts/sandbox-2-creativo.md")"
+cd '/Users/carlosdominguez/Vibe Coding/sandbox-2'
+claude --dangerously-skip-permissions "$(cat '/Users/carlosdominguez/Vibe Coding/Demo/forja/prompts/sandbox-2-creativo.md')"
 ```
 
 **Tab 3 — Disruptivo:**
 ```bash
-cd "/Users/carlosdominguez/Vibe Coding/sandbox-3"
-claude --dangerously-skip-permissions "$(cat "/Users/carlosdominguez/Vibe Coding/Demo/forja/prompts/sandbox-3-disruptivo.md")"
+cd '/Users/carlosdominguez/Vibe Coding/sandbox-3'
+claude --dangerously-skip-permissions "$(cat '/Users/carlosdominguez/Vibe Coding/Demo/forja/prompts/sandbox-3-disruptivo.md')"
 ```
 
 ### 3. Mientras los agentes trabajan
@@ -72,8 +72,8 @@ cd "/Users/carlosdominguez/Vibe Coding/sandbox-3" && npm run dev  # puerto 3002
 Usa el prompt de review en tu sesion manual:
 
 ```bash
-cd "/Users/carlosdominguez/Vibe Coding/Demo"
-claude --dangerously-skip-permissions "$(cat "/Users/carlosdominguez/Vibe Coding/Demo/forja/prompts/review-prompt.md")"
+cd '/Users/carlosdominguez/Vibe Coding/Demo'
+claude --dangerously-skip-permissions "$(cat '/Users/carlosdominguez/Vibe Coding/Demo/forja/prompts/review-prompt.md')"
 ```
 
 El agente de review comparara las 3 implementaciones y recomendara

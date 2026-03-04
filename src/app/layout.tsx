@@ -22,11 +22,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Virtual Staging from $19.99 | AI Home Staging — Renderly',
+    default: 'Virtual Staging from $19.99 | AI Home Staging | Renderly',
     template: '%s | Renderly',
   },
   description:
-    'AI virtual staging for real estate photos. Stage any room in 30 seconds from $19.99. MLS-ready results. No designer needed. Try free — Winnipeg & Canada.',
+    'AI virtual staging for real estate photos. Stage any room in 30 seconds from $19.99. MLS-ready results. No designer needed. Try free. Winnipeg & Canada.',
   keywords: [
     'virtual staging',
     'AI virtual staging',
@@ -68,13 +68,13 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     url: SITE_URL,
     siteName: 'Renderly',
-    title: 'Virtual Staging from $19.99 — Stage Any Room in 30 Seconds',
+    title: 'Virtual Staging from $19.99 | Stage Any Room in 30 Seconds',
     description:
       'AI virtual staging for real estate. Upload a photo, pick a style, get MLS-ready staged images in minutes. No designer needed. Free to start.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Virtual Staging from $19.99 — Stage Any Room in 30 Seconds',
+    title: 'Virtual Staging from $19.99 | Stage Any Room in 30 Seconds',
     description:
       'AI virtual staging for real estate. Upload a photo, pick a style, get MLS-ready staged images in minutes. No designer needed. Free to start.',
     creator: '@renderly',
@@ -114,7 +114,7 @@ const softwareAppSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Renderly — AI Virtual Staging',
+  name: 'Renderly | AI Virtual Staging',
   description:
     'Affordable AI-powered virtual staging for real estate photos in Winnipeg, Manitoba and across Canada. Stage any room from $19.99.',
   url: SITE_URL,
@@ -144,7 +144,7 @@ const faqSchema = {
       name: 'How much does virtual staging cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Renderly offers virtual staging starting at $0 (free plan with 1 image) up to $29.99 per property for the Professional plan with 9 staged images. The Enterprise plan at $75/month covers unlimited properties. Most plans are one-time payments — no subscription required.',
+        text: 'Renderly offers virtual staging starting at $0 (free plan with 1 image) up to $29.99 per property for the Professional plan with 9 staged images. The Enterprise plan at $75/month covers unlimited properties. Most plans are one-time payments, no subscription required.',
       },
     },
     {
@@ -165,7 +165,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Virtual staging vs traditional staging — which is better?',
+      name: 'Virtual staging vs traditional staging: which is better?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Traditional physical staging costs $2,000-$5,000 per property and takes weeks to coordinate. Virtual staging starts at $19.99 per property and delivers results in minutes. Both help listings sell faster, but virtual staging is 95% cheaper and infinitely faster.',
@@ -184,7 +184,7 @@ const faqSchema = {
       name: 'Do I need any design skills to use Renderly?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Renderly is designed for anyone — real estate agents, homeowners, landlords. Upload a photo, pick a style, and the AI handles everything. No design software, no learning curve.',
+        text: 'No. Renderly is built for real estate agents, homeowners, and landlords. Upload a photo, pick a style, and the AI handles everything. No design software, no learning curve.',
       },
     },
   ],

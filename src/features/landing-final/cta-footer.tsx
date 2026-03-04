@@ -169,12 +169,6 @@ export function Footer({ tagline, copyright }: FooterProps) {
                 About
               </a>
               <a
-                href="#"
-                className="font-body text-sm text-white/50 transition-colors hover:text-white"
-              >
-                Blog
-              </a>
-              <a
                 href="/contact"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >

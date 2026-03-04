@@ -39,8 +39,8 @@ export function TermsOfServicePage() {
           for real estate listings, rental postings, and marketing materials.
         </p>
         <p className="mt-4 font-body text-[var(--text-secondary)] leading-relaxed">
-          By creating an account or using Renderly in any way — including browsing the website,
-          uploading photos, or downloading staged images — you enter into a binding legal agreement
+          By creating an account or using Renderly in any way, including browsing the website,
+          uploading photos, or downloading staged images, you enter into a binding legal agreement
           with Renderly (SystemizMyBiz Agency) governed by these Terms of Service.
         </p>
       </section>
@@ -219,9 +219,9 @@ export function TermsOfServicePage() {
           7. Intellectual Property
         </h2>
         <p className="mt-4 font-body text-[var(--text-secondary)] leading-relaxed">
-          All rights, title, and interest in and to the Renderly platform — including its software,
-          source code, AI models, design, trademarks, brand assets, logos, and marketing materials
-          — are and remain the exclusive property of Renderly (SystemizMyBiz Agency). Nothing in
+          All rights, title, and interest in and to the Renderly platform, including its software,
+          source code, AI models, design, trademarks, brand assets, logos, and marketing materials,
+          are and remain the exclusive property of Renderly (SystemizMyBiz Agency). Nothing in
           these Terms grants you ownership of or rights to Renderly's intellectual property beyond
           the limited license described in Section 6.
         </p>

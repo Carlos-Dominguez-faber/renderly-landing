@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Renderly — AI Virtual Staging',
+    name: 'Renderly | AI Virtual Staging',
     short_name: 'Renderly',
     description:
       'AI-powered virtual staging for real estate. Furnish empty rooms with photorealistic furniture in minutes.',

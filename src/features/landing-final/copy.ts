@@ -142,9 +142,9 @@ export const copy: Record<Lang, CopySection> = {
       afterLabel: 'After',
     },
     pain: {
-      title: 'Empty Rooms Don\u2019t Sell',
+      title: 'Empty Rooms Don\'t Sell',
       paragraphs: [
-        'Whether you\u2019re a real estate agent, a homeowner selling your property, or a landlord listing a rental \u2014 you already know: buyers can\u2019t picture themselves living in a blank space. So you stage \u2014 and that\u2019s where the headache starts.',
+        'Whether you\'re a real estate agent, a homeowner selling your property, or a landlord listing a rental, you already know: buyers can\'t picture themselves living in a blank space. So you stage, and that\'s where the headache starts.',
         'Physical staging runs $2,000 to $5,000 per property. You coordinate with rental companies, schedule movers, hope nothing gets damaged. The whole process takes weeks.',
         'Want a different style for a different buyer profile? Start over. Pay again. Meanwhile, your listing sits and motivated buyers move on.',
       ],
@@ -152,7 +152,7 @@ export const copy: Record<Lang, CopySection> = {
     benefits: {
       title: 'Master Every Detail',
       subtitle:
-        'Our AI doesn\u2019t just place furniture \u2014 it understands architecture, lighting, and materials to create photorealistic results.',
+        'Our AI doesn\'t just place furniture. It understands architecture, lighting, and materials to create photorealistic results.',
       items: [
         {
           title: 'Lightning Processing',
@@ -173,7 +173,7 @@ export const copy: Record<Lang, CopySection> = {
     },
     howItWorks: {
       title: 'How It Works',
-      subtitle: 'Three steps. That\u2019s it.',
+      subtitle: 'Three steps. That\'s it.',
       steps: [
         {
           step: '01',
@@ -185,7 +185,7 @@ export const copy: Record<Lang, CopySection> = {
           step: '02',
           title: 'Style',
           description:
-            'Choose from dozens of design styles. Modern, traditional, mid-century, Scandinavian \u2014 you pick.',
+            'Choose from dozens of design styles. Modern, traditional, mid-century, Scandinavian. You pick.',
         },
         {
           step: '03',
@@ -203,15 +203,15 @@ export const copy: Record<Lang, CopySection> = {
     earlyAccess: {
       title: 'Join the Early Access',
       description:
-        'Renderly is launching and we\u2019re inviting a select group of agents to try it first. All we ask is your honest feedback.',
+        'Renderly is launching and we\'re inviting a select group of agents to try it first. All we ask is your honest feedback.',
       discount: '50% off any paid plan',
       form: {
         emailPlaceholder: 'name@realty.com',
         namePlaceholder: 'Jane Smith',
-        submit: 'Get Early Access \u2014 50% Off',
+        submit: 'Get Early Access - 50% Off',
         microcopy: 'Free to start. No spam, ever.',
         success:
-          'You\u2019re in! Check your email for your early access link and discount code.',
+          'You\'re in! Check your email for your early access link and discount code.',
       },
     },
     faq: {
@@ -220,12 +220,12 @@ export const copy: Record<Lang, CopySection> = {
         {
           question: 'What is virtual staging?',
           answer:
-            'Virtual staging is the process of digitally adding furniture, decor, and finishes to photos of empty rooms using AI. It produces photorealistic images that help buyers visualize a space \u2014 typically costing 95% less than physical staging and delivering results in minutes instead of weeks.',
+            'Virtual staging is the process of digitally adding furniture, decor, and finishes to photos of empty rooms using AI. It produces photorealistic images that help buyers visualize a space, typically costing 95% less than physical staging and delivering results in minutes instead of weeks.',
         },
         {
           question: 'How much does virtual staging cost?',
           answer:
-            'Renderly offers virtual staging starting at $0 (free plan with 1 image) up to $29.99 per property for the Professional plan with 9 staged images. The Enterprise plan at $75/month covers unlimited properties. Most plans are one-time payments \u2014 no subscription required.',
+            'Renderly offers virtual staging starting at $0 (free plan with 1 image) up to $29.99 per property for the Professional plan with 9 staged images. The Enterprise plan at $75/month covers unlimited properties. Most plans are one-time payments, no subscription required.',
         },
         {
           question: 'Is virtual staging allowed on MLS?',
@@ -235,22 +235,22 @@ export const copy: Record<Lang, CopySection> = {
         {
           question: 'How does AI virtual staging work?',
           answer:
-            'Upload a photo of any empty room, choose from dozens of design styles (Modern, Scandinavian, Mid-Century, etc.), and Renderly\u2019s AI renders photorealistic furniture with accurate lighting and shadows in under 30 seconds. No design skills needed.',
+            'Upload a photo of any empty room, choose from dozens of design styles (Modern, Scandinavian, Mid-Century, etc.), and Renderly\'s AI renders photorealistic furniture with accurate lighting and shadows in under 30 seconds. No design skills needed.',
         },
         {
-          question: 'Virtual staging vs traditional staging \u2014 which is better?',
+          question: 'Virtual staging vs traditional staging: which is better?',
           answer:
-            'Traditional physical staging costs $2,000\u2013$5,000 per property and takes weeks to coordinate. Virtual staging starts at $19.99 per property and delivers results in minutes. Both help listings sell faster, but virtual staging is 95% cheaper and infinitely faster.',
+            'Traditional physical staging costs $2,000-$5,000 per property and takes weeks to coordinate. Virtual staging starts at $19.99 per property and delivers results in minutes. Both help listings sell faster, but virtual staging is 95% cheaper and infinitely faster.',
         },
         {
           question: 'Does virtual staging help sell a house faster?',
           answer:
-            'Yes. Studies show staged listings sell 73% faster and for 5\u201310% more than unstaged homes. Virtual staging delivers the same buyer engagement benefits as physical staging at a fraction of the cost.',
+            'Yes. Studies show staged listings sell 73% faster and for 5-10% more than unstaged homes. Virtual staging delivers the same buyer engagement benefits as physical staging at a fraction of the cost.',
         },
         {
           question: 'Do I need any design skills to use Renderly?',
           answer:
-            'No. Renderly is designed for anyone \u2014 real estate agents, homeowners, landlords. Upload a photo, pick a style, and the AI handles everything. No design software, no learning curve, no designer required.',
+            'No. Renderly is built for real estate agents, homeowners, and landlords. Upload a photo, pick a style, and the AI handles everything. No design software, no learning curve, no designer required.',
         },
       ],
     },
@@ -258,7 +258,7 @@ export const copy: Record<Lang, CopySection> = {
       badge: 'Simple Pricing',
       title: 'Choose Your Plan',
       subtitle:
-        'Transform empty properties into stunning spaces. No subscriptions for most plans\u2014pay once, use forever.',
+        'Transform empty properties into stunning spaces. No subscriptions for most plans. Pay once, use forever.',
       plans: [
         {
           name: 'Free',
@@ -389,7 +389,7 @@ export const copy: Record<Lang, CopySection> = {
     pain: {
       title: 'Las Habitaciones Vac\u00edas No Venden',
       paragraphs: [
-        'Ya seas agente inmobiliario, propietario vendiendo tu casa, o arrendador publicando un alquiler \u2014 ya lo sabes: los compradores no pueden imaginarse viviendo en un espacio en blanco. As\u00ed que recurres al staging f\u00edsico \u2014 y ah\u00ed empieza el dolor de cabeza.',
+        'Ya seas agente inmobiliario, propietario vendiendo tu casa, o arrendador publicando un alquiler, ya lo sabes: los compradores no pueden imaginarse viviendo en un espacio en blanco. Recurres al staging f\u00edsico, y ah\u00ed empieza el dolor de cabeza.',
         'El staging tradicional cuesta entre $2,000 y $5,000 por propiedad. Coordinas con empresas de renta de muebles, programas mudanzas, y rezas para que nada se da\u00f1e. Todo el proceso toma semanas.',
         '\u00bfNecesitas un estilo diferente para otro perfil de comprador? Empieza de cero. Paga de nuevo. Mientras tanto, tu propiedad sigue sin venderse.',
       ],
@@ -397,7 +397,7 @@ export const copy: Record<Lang, CopySection> = {
     benefits: {
       title: 'Domina Cada Detalle',
       subtitle:
-        'Nuestra IA no solo coloca muebles \u2014 entiende arquitectura, iluminaci\u00f3n y materiales para crear resultados fotorrealistas.',
+        'Nuestra IA no solo coloca muebles. Entiende arquitectura, iluminaci\u00f3n y materiales para crear resultados fotorrealistas.',
       items: [
         {
           title: 'Procesamiento Rel\u00e1mpago',
@@ -430,7 +430,7 @@ export const copy: Record<Lang, CopySection> = {
           step: '02',
           title: 'Elige',
           description:
-            'Escoge entre decenas de estilos de dise\u00f1o. Moderno, tradicional, mid-century, escandinavo \u2014 t\u00fa decides.',
+            'Escoge entre decenas de estilos de dise\u00f1o. Moderno, tradicional, mid-century, escandinavo. T\u00fa decides.',
         },
         {
           step: '03',
@@ -453,7 +453,7 @@ export const copy: Record<Lang, CopySection> = {
       form: {
         emailPlaceholder: 'nombre@inmobiliaria.com',
         namePlaceholder: 'Juan P\u00e9rez',
-        submit: 'Obtener Early Access \u2014 50% Desc.',
+        submit: 'Obtener Early Access - 50% Desc.',
         microcopy: 'Gratis para empezar. Jam\u00e1s spam.',
         success:
           '\u00a1Ya est\u00e1s dentro! Revisa tu email para tu enlace de early access y c\u00f3digo de descuento.',
@@ -465,12 +465,12 @@ export const copy: Record<Lang, CopySection> = {
         {
           question: '\u00bfQu\u00e9 es el virtual staging?',
           answer:
-            'El virtual staging es el proceso de agregar digitalmente muebles, decoraci\u00f3n y acabados a fotos de habitaciones vac\u00edas usando IA. Produce im\u00e1genes fotorrealistas que ayudan a los compradores a visualizar un espacio \u2014 costando t\u00edpicamente 95% menos que el staging f\u00edsico y entregando resultados en minutos.',
+            'El virtual staging es el proceso de agregar digitalmente muebles, decoraci\u00f3n y acabados a fotos de habitaciones vac\u00edas usando IA. Produce im\u00e1genes fotorrealistas que ayudan a los compradores a visualizar un espacio, costando t\u00edpicamente 95% menos que el staging f\u00edsico y entregando resultados en minutos.',
         },
         {
           question: '\u00bfCu\u00e1nto cuesta el virtual staging?',
           answer:
-            'Renderly ofrece virtual staging desde $0 (plan gratuito con 1 imagen) hasta $29.99 por propiedad en el plan Profesional con 9 im\u00e1genes. El plan Enterprise a $75/mes cubre propiedades ilimitadas. La mayor\u00eda de planes son pagos \u00fanicos \u2014 sin suscripci\u00f3n.',
+            'Renderly ofrece virtual staging desde $0 (plan gratuito con 1 imagen) hasta $29.99 por propiedad en el plan Profesional con 9 im\u00e1genes. El plan Enterprise a $75/mes cubre propiedades ilimitadas. La mayor\u00eda de planes son pagos \u00fanicos, sin suscripci\u00f3n.',
         },
         {
           question: '\u00bfSe permite el virtual staging en MLS?',
@@ -483,19 +483,19 @@ export const copy: Record<Lang, CopySection> = {
             'Sube una foto de cualquier habitaci\u00f3n vac\u00eda, elige entre docenas de estilos de dise\u00f1o (Moderno, Escandinavo, Mid-Century, etc.), y la IA de Renderly renderiza muebles fotorrealistas con iluminaci\u00f3n y sombras precisas en menos de 30 segundos. Sin habilidades de dise\u00f1o necesarias.',
         },
         {
-          question: 'Virtual staging vs staging tradicional \u2014 \u00bfcu\u00e1l es mejor?',
+          question: 'Virtual staging vs staging tradicional: \u00bfcu\u00e1l es mejor?',
           answer:
-            'El staging f\u00edsico tradicional cuesta $2,000\u2013$5,000 por propiedad y toma semanas coordinar. El virtual staging comienza en $19.99 por propiedad y entrega resultados en minutos. Ambos ayudan a vender m\u00e1s r\u00e1pido, pero el virtual staging es 95% m\u00e1s econ\u00f3mico e infinitamente m\u00e1s r\u00e1pido.',
+            'El staging f\u00edsico tradicional cuesta $2,000-$5,000 por propiedad y toma semanas coordinar. El virtual staging comienza en $19.99 por propiedad y entrega resultados en minutos. Ambos ayudan a vender m\u00e1s r\u00e1pido, pero el virtual staging es 95% m\u00e1s econ\u00f3mico e infinitamente m\u00e1s r\u00e1pido.',
         },
         {
           question: '\u00bfEl virtual staging ayuda a vender una casa m\u00e1s r\u00e1pido?',
           answer:
-            'S\u00ed. Estudios muestran que las propiedades con staging se venden 73% m\u00e1s r\u00e1pido y por 5\u201310% m\u00e1s que las propiedades sin staging. El virtual staging ofrece los mismos beneficios de engagement con compradores a una fracci\u00f3n del costo.',
+            'S\u00ed. Estudios muestran que las propiedades con staging se venden 73% m\u00e1s r\u00e1pido y por 5-10% m\u00e1s que las propiedades sin staging. El virtual staging ofrece los mismos beneficios de engagement con compradores a una fracci\u00f3n del costo.',
         },
         {
           question: '\u00bfNecesito habilidades de dise\u00f1o para usar Renderly?',
           answer:
-            'No. Renderly est\u00e1 dise\u00f1ado para cualquiera \u2014 agentes inmobiliarios, propietarios, arrendadores. Sube una foto, elige un estilo, y la IA se encarga de todo. Sin software de dise\u00f1o, sin curva de aprendizaje.',
+            'No. Renderly est\u00e1 hecho para agentes inmobiliarios, propietarios y arrendadores. Sube una foto, elige un estilo, y la IA se encarga de todo. Sin software de dise\u00f1o, sin curva de aprendizaje.',
         },
       ],
     },
@@ -503,7 +503,7 @@ export const copy: Record<Lang, CopySection> = {
       badge: 'Precios Simples',
       title: 'Elige Tu Plan',
       subtitle:
-        'Transforma propiedades vac\u00edas en espacios impresionantes. Sin suscripciones para la mayor\u00eda de planes\u2014paga una vez, \u00fasalo siempre.',
+        'Transforma propiedades vac\u00edas en espacios impresionantes. Sin suscripciones para la mayor\u00eda de planes. Paga una vez, \u00fasalo siempre.',
       plans: [
         {
           name: 'Gratis',

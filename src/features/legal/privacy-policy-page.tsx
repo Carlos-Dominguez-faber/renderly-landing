@@ -217,7 +217,7 @@ export function PrivacyPolicyPage() {
         <ul className="mt-4 space-y-2">
           {[
             'Essential cookies: Required for the platform to function. These include session management cookies and authentication tokens. These cannot be disabled without impairing core functionality.',
-            'Analytics cookies (Google Analytics): We use Google Analytics to collect anonymized data about how users navigate the platform — which features are used most, where users drop off, and how performance can be improved. You can opt out of Google Analytics tracking by installing the Google Analytics Opt-out Browser Add-on.',
+            'Analytics cookies (Google Analytics): We use Google Analytics to collect anonymized data about how users navigate the platform, including which features are used most, where users drop off, and how performance can be improved. You can opt out of Google Analytics tracking by installing the Google Analytics Opt-out Browser Add-on.',
             'Preference cookies: Store your settings and preferences, such as language or display options, so you do not have to re-enter them each visit.',
           ].map((item) => (
             <li key={item} className="flex items-start gap-2.5 font-body text-[var(--text-secondary)]">

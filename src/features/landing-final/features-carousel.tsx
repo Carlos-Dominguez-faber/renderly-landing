@@ -21,7 +21,7 @@ const FEATURES: FeatureCard[] = [
   {
     title: 'Style',
     titleHighlight: 'Library',
-    description: 'Choose from 5,000+ curated 3D assets. Modern, Scandinavian, Mid-Century — every aesthetic covered.',
+    description: 'Choose from 5,000+ curated 3D assets. Modern, Scandinavian, Mid-Century, and every aesthetic covered.',
     image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80&auto=format&fit=crop',
   },
   {

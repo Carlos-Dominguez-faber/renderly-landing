@@ -52,7 +52,7 @@ const TESTIMONIALS: Testimonial[] = [
     name: 'Robert Williams',
     role: 'Commercial Agent, CBRE',
     avatar: 'https://randomuser.me/api/portraits/men/52.jpg',
-    text: 'We use Renderly for commercial properties too. Conference rooms, lobbies, open offices — the AI handles it all. Batch processing saves us hours every week.',
+    text: 'We use Renderly for commercial properties too. Conference rooms, lobbies, open offices. The AI handles it all. Batch processing saves us hours every week.',
     rating: 5,
   },
   {

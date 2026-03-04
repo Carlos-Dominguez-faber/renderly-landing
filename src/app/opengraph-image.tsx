@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-export const alt = 'Renderly — Affordable AI Virtual Staging for Real Estate Photos'
+export const alt = 'Renderly | Affordable AI Virtual Staging for Real Estate Photos'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -103,7 +103,7 @@ export default function OGImage() {
               maxWidth: 700,
             }}
           >
-            Virtual Staging from $19.99 — Winnipeg & Canada
+            Virtual Staging from $19.99 | Winnipeg & Canada
           </span>
         </div>
 

@@ -12,75 +12,19 @@ interface Testimonial {
   rating: number
 }
 
-const TESTIMONIALS: Testimonial[] = [
-  {
-    name: 'Sarah Mitchell',
-    role: 'Real Estate Agent, RE/MAX',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-    text: 'Renderly cut my staging costs by 90%. I used to spend $3,000 per listing on physical staging. Now I get better-looking photos for $29.99. My listings sell in half the time.',
-    rating: 5,
-  },
-  {
-    name: 'Marcus Chen',
-    role: 'Broker, Coldwell Banker',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    text: 'The AI understands lighting and shadows in a way I have never seen before. Buyers literally cannot tell the difference between our virtual staging and real photos.',
-    rating: 5,
-  },
-  {
-    name: 'Emily Rodriguez',
-    role: 'Property Manager',
-    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
-    text: 'Managing 40+ rental units means staging is impossible. With Renderly, I stage every vacant unit in minutes. Vacancy rates dropped 35% since we started using it.',
-    rating: 5,
-  },
-  {
-    name: 'David Park',
-    role: 'Real Estate Agent, Keller Williams',
-    avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
-    text: 'The video tours feature is a game-changer. I send 8-second walkthrough videos to potential buyers and get 3x more showing requests than with static photos alone.',
-    rating: 5,
-  },
-  {
-    name: 'Jessica Thompson',
-    role: 'Homeowner, Winnipeg',
-    avatar: 'https://randomuser.me/api/portraits/women/22.jpg',
-    text: 'Selling FSBO and saved thousands by staging virtually. The Scandinavian style I chose got so many compliments during showings. Sold above asking price!',
-    rating: 5,
-  },
-  {
-    name: 'Robert Williams',
-    role: 'Commercial Agent, CBRE',
-    avatar: 'https://randomuser.me/api/portraits/men/52.jpg',
-    text: 'We use Renderly for commercial properties too. Conference rooms, lobbies, open offices. The AI handles it all. Batch processing saves us hours every week.',
-    rating: 5,
-  },
-  {
-    name: 'Amanda Foster',
-    role: 'Interior Designer & Agent',
-    avatar: 'https://randomuser.me/api/portraits/women/35.jpg',
-    text: 'As a designer, I was skeptical. But the quality of the 3D assets and the lighting accuracy genuinely impressed me. I now recommend it to all my agent clients.',
-    rating: 5,
-  },
-  {
-    name: 'Michael Torres',
-    role: 'Real Estate Investor',
-    avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
-    text: 'Flipping houses means fast turnaround. Renderly lets me list properties before renovations are complete. I stage the "after" vision and attract buyers early.',
-    rating: 5,
-  },
-]
-
 interface TestimonialsProps {
   socialProof: { rating: string; count: string }
+  heading: string
+  ratingLabel: string
+  items: Testimonial[]
 }
 
-export function TestimonialsSection({ socialProof }: TestimonialsProps) {
+export function TestimonialsSection({ socialProof, heading, ratingLabel, items }: TestimonialsProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-60px' })
 
-  const row1 = TESTIMONIALS.slice(0, 4)
-  const row2 = TESTIMONIALS.slice(4)
+  const row1 = items.slice(0, 4)
+  const row2 = items.slice(4)
 
   return (
     <section
@@ -104,10 +48,10 @@ export function TestimonialsSection({ socialProof }: TestimonialsProps) {
               ))}
             </div>
             <span className="font-display text-sm font-bold text-white">
-              {socialProof.rating}/5 Rating
+              {socialProof.rating}{ratingLabel}
             </span>
             <div className="flex -space-x-2">
-              {TESTIMONIALS.slice(0, 4).map((t, i) => (
+              {items.slice(0, 4).map((t, i) => (
                 <img
                   key={i}
                   src={t.avatar}
@@ -119,11 +63,11 @@ export function TestimonialsSection({ socialProof }: TestimonialsProps) {
           </div>
 
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Trusted by 2,000+ agents & homeowners
+            {heading}
           </h2>
         </motion.div>
 
-        {/* Marquee row 1 — left */}
+        {/* Marquee row 1 */}
         <div className="relative mb-6 overflow-hidden">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[var(--bg-dark)] to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[var(--bg-dark)] to-transparent" />
@@ -134,7 +78,7 @@ export function TestimonialsSection({ socialProof }: TestimonialsProps) {
           </div>
         </div>
 
-        {/* Marquee row 2 — right */}
+        {/* Marquee row 2 */}
         <div className="relative overflow-hidden">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[var(--bg-dark)] to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[var(--bg-dark)] to-transparent" />

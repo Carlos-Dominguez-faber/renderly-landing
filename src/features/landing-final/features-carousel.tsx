@@ -4,58 +4,21 @@ import { useRef, useState, useEffect } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
 
-interface FeatureCard {
+interface FeatureItem {
   title: string
   titleHighlight: string
   description: string
   image: string
 }
 
-const FEATURES: FeatureCard[] = [
-  {
-    title: 'AI Virtual',
-    titleHighlight: 'Staging',
-    description: 'Transform empty rooms into beautifully furnished spaces with photorealistic AI in under 30 seconds.',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb3?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    title: 'Style',
-    titleHighlight: 'Library',
-    description: 'Choose from 5,000+ curated 3D assets. Modern, Scandinavian, Mid-Century, and every aesthetic covered.',
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    title: 'MLS-Ready',
-    titleHighlight: 'Output',
-    description: 'High-resolution images optimized for MLS listings, social media, and print marketing materials.',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    title: 'Video',
-    titleHighlight: 'Tours',
-    description: 'Generate cinematic property walkthroughs from your staged photos. Up to 24 seconds in 4K quality.',
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    title: 'Custom',
-    titleHighlight: 'Branding',
-    description: 'Add your logo and brand colors to every staged image. Professional presentation for every listing.',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    title: 'Batch',
-    titleHighlight: 'Processing',
-    description: 'Stage entire properties at once. Upload multiple rooms and get all results in a single batch.',
-    image: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80&auto=format&fit=crop',
-  },
-]
-
 interface FeaturesCarouselProps {
   title: string
   subtitle: string
+  badge: string
+  items: FeatureItem[]
 }
 
-export function FeaturesCarousel({ title, subtitle }: FeaturesCarouselProps) {
+export function FeaturesCarousel({ title, subtitle, badge, items }: FeaturesCarouselProps) {
   const sectionRef = useRef(null)
   const scrollRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(sectionRef, { once: true, margin: '-60px' })
@@ -104,7 +67,7 @@ export function FeaturesCarousel({ title, subtitle }: FeaturesCarouselProps) {
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-body text-sm font-medium text-white/60">
               <Sparkles className="h-4 w-4 text-cta" />
-              Features
+              {badge}
             </div>
             <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
               {title}
@@ -161,7 +124,7 @@ export function FeaturesCarousel({ title, subtitle }: FeaturesCarouselProps) {
             document.addEventListener('mouseup', handleMouseUp)
           }}
         >
-          {FEATURES.map((feature, i) => (
+          {items.map((feature, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 24 }}

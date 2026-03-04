@@ -56,11 +56,13 @@ export function Navbar({
   lang,
   onToggleLang,
   ctaText,
+  navLinks,
   bannerVisible,
 }: {
   lang: Lang
   onToggleLang: () => void
   ctaText: string
+  navLinks: { features: string; pricing: string; faq: string }
   bannerVisible: boolean
 }) {
   const [scrolled, setScrolled] = useState(false)
@@ -110,7 +112,7 @@ export function Navbar({
 
           {/* Nav links - center */}
           <div className="hidden items-center gap-8 md:flex">
-            {['features', 'pricing', 'faq'].map((id) => (
+            {(['features', 'pricing', 'faq'] as const).map((id) => (
               <a
                 key={id}
                 href={`#${id}`}
@@ -120,7 +122,7 @@ export function Navbar({
                     : 'text-white/60 hover:text-white'
                 }`}
               >
-                {id.charAt(0).toUpperCase() + id.slice(1)}
+                {navLinks[id]}
               </a>
             ))}
           </div>

@@ -1,8 +1,26 @@
 export type Lang = 'en' | 'es'
 
+interface FeatureItem {
+  title: string
+  titleHighlight: string
+  description: string
+  image: string
+}
+
+interface Testimonial {
+  name: string
+  role: string
+  avatar: string
+  text: string
+  rating: number
+}
+
 interface CopySection {
   banner: { text: string; cta: string }
-  nav: { cta: string }
+  nav: {
+    cta: string
+    links: { features: string; pricing: string; faq: string }
+  }
   hero: {
     titleTop: string
     titleBottom: string
@@ -41,14 +59,24 @@ interface CopySection {
     subtitle: string
     items: Array<{ title: string; description: string }>
   }
+  features: {
+    badge: string
+    items: FeatureItem[]
+  }
   howItWorks: {
     title: string
     subtitle: string
+    stepPrefix: string
     steps: Array<{ step: string; title: string; description: string }>
   }
   video: {
     title: string
     subtitle: string
+  }
+  testimonials: {
+    heading: string
+    ratingLabel: string
+    items: Testimonial[]
   }
   earlyAccess: {
     title: string
@@ -64,12 +92,18 @@ interface CopySection {
   }
   faq: {
     title: string
+    badge: string
+    subtitle: string
+    contactCta: string
+    tabs: Array<{ id: string; label: string }>
     items: Array<{ question: string; answer: string }>
   }
   pricing: {
     badge: string
     title: string
     subtitle: string
+    popularBadge: string
+    featuresIncluded: string
     plans: Array<{
       name: string
       description: string
@@ -85,8 +119,25 @@ interface CopySection {
     subtitle: string
     cta: string
     secondaryCta: string
+    trustItems: string[]
+    videoLabel: string
   }
-  footer: { tagline: string; copyright: string }
+  footer: {
+    tagline: string
+    copyright: string
+    productLabel: string
+    companyLabel: string
+    links: {
+      features: string
+      pricing: string
+      faq: string
+      about: string
+      contact: string
+      login: string
+    }
+    privacyLink: string
+    termsLink: string
+  }
 }
 
 export const copy: Record<Lang, CopySection> = {
@@ -95,7 +146,10 @@ export const copy: Record<Lang, CopySection> = {
       text: 'Early Access: 50% off all paid plans. Limited spots.',
       cta: 'Claim Discount',
     },
-    nav: { cta: 'Get Started Free' },
+    nav: {
+      cta: 'Get Started Free',
+      links: { features: 'Features', pricing: 'Pricing', faq: 'FAQ' },
+    },
     hero: {
       titleTop: 'AI Virtual Staging',
       titleBottom: 'from $19.99 per Property',
@@ -171,9 +225,51 @@ export const copy: Record<Lang, CopySection> = {
         },
       ],
     },
+    features: {
+      badge: 'Features',
+      items: [
+        {
+          title: 'AI Virtual',
+          titleHighlight: 'Staging',
+          description: 'Transform empty rooms into beautifully furnished spaces with photorealistic AI in under 30 seconds.',
+          image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb3?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Style',
+          titleHighlight: 'Library',
+          description: 'Choose from 5,000+ curated 3D assets. Modern, Scandinavian, Mid-Century, and every aesthetic covered.',
+          image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'MLS-Ready',
+          titleHighlight: 'Output',
+          description: 'High-resolution images optimized for MLS listings, social media, and print marketing materials.',
+          image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Video',
+          titleHighlight: 'Tours',
+          description: 'Generate cinematic property walkthroughs from your staged photos. Up to 24 seconds in 4K quality.',
+          image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Custom',
+          titleHighlight: 'Branding',
+          description: 'Add your logo and brand colors to every staged image. Professional presentation for every listing.',
+          image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Batch',
+          titleHighlight: 'Processing',
+          description: 'Stage entire properties at once. Upload multiple rooms and get all results in a single batch.',
+          image: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80&auto=format&fit=crop',
+        },
+      ],
+    },
     howItWorks: {
       title: 'How It Works',
       subtitle: 'Three steps. That\'s it.',
+      stepPrefix: 'Step',
       steps: [
         {
           step: '01',
@@ -200,6 +296,68 @@ export const copy: Record<Lang, CopySection> = {
       subtitle:
         'Watch how Renderly transforms an empty room into a beautifully staged space in seconds.',
     },
+    testimonials: {
+      heading: 'Trusted by 2,000+ agents & homeowners',
+      ratingLabel: '/5 Rating',
+      items: [
+        {
+          name: 'Sarah Mitchell',
+          role: 'Real Estate Agent, RE/MAX',
+          avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+          text: 'Renderly cut my staging costs by 90%. I used to spend $3,000 per listing on physical staging. Now I get better-looking photos for $29.99. My listings sell in half the time.',
+          rating: 5,
+        },
+        {
+          name: 'Marcus Chen',
+          role: 'Broker, Coldwell Banker',
+          avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+          text: 'The AI understands lighting and shadows in a way I have never seen before. Buyers literally cannot tell the difference between our virtual staging and real photos.',
+          rating: 5,
+        },
+        {
+          name: 'Emily Rodriguez',
+          role: 'Property Manager',
+          avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+          text: 'Managing 40+ rental units means staging is impossible. With Renderly, I stage every vacant unit in minutes. Vacancy rates dropped 35% since we started using it.',
+          rating: 5,
+        },
+        {
+          name: 'David Park',
+          role: 'Real Estate Agent, Keller Williams',
+          avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
+          text: 'The video tours feature is a game-changer. I send 8-second walkthrough videos to potential buyers and get 3x more showing requests than with static photos alone.',
+          rating: 5,
+        },
+        {
+          name: 'Jessica Thompson',
+          role: 'Homeowner, Winnipeg',
+          avatar: 'https://randomuser.me/api/portraits/women/22.jpg',
+          text: 'Selling FSBO and saved thousands by staging virtually. The Scandinavian style I chose got so many compliments during showings. Sold above asking price!',
+          rating: 5,
+        },
+        {
+          name: 'Robert Williams',
+          role: 'Commercial Agent, CBRE',
+          avatar: 'https://randomuser.me/api/portraits/men/52.jpg',
+          text: 'We use Renderly for commercial properties too. Conference rooms, lobbies, open offices. The AI handles it all. Batch processing saves us hours every week.',
+          rating: 5,
+        },
+        {
+          name: 'Amanda Foster',
+          role: 'Interior Designer & Agent',
+          avatar: 'https://randomuser.me/api/portraits/women/35.jpg',
+          text: 'As a designer, I was skeptical. But the quality of the 3D assets and the lighting accuracy genuinely impressed me. I now recommend it to all my agent clients.',
+          rating: 5,
+        },
+        {
+          name: 'Michael Torres',
+          role: 'Real Estate Investor',
+          avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
+          text: 'Flipping houses means fast turnaround. Renderly lets me list properties before renovations are complete. I stage the "after" vision and attract buyers early.',
+          rating: 5,
+        },
+      ],
+    },
     earlyAccess: {
       title: 'Join the Early Access',
       description:
@@ -216,6 +374,14 @@ export const copy: Record<Lang, CopySection> = {
     },
     faq: {
       title: 'Questions & Answers',
+      badge: 'FAQ',
+      subtitle: 'Everything you need to know about Renderly',
+      contactCta: 'Still have questions? Contact us',
+      tabs: [
+        { id: 'general', label: 'General' },
+        { id: 'pricing', label: 'Pricing' },
+        { id: 'technical', label: 'Technical' },
+      ],
       items: [
         {
           question: 'What is virtual staging?',
@@ -259,6 +425,8 @@ export const copy: Record<Lang, CopySection> = {
       title: 'Choose Your Plan',
       subtitle:
         'Transform empty properties into stunning spaces. No subscriptions for most plans. Pay once, use forever.',
+      popularBadge: 'Most Popular',
+      featuresIncluded: 'Features included',
       plans: [
         {
           name: 'Free',
@@ -329,10 +497,28 @@ export const copy: Record<Lang, CopySection> = {
         'Listings with virtual staging sell 30% faster and for 5-10% more. Start transforming your properties today.',
       cta: 'Claim Free Trial',
       secondaryCta: 'Watch Demo',
+      trustItems: [
+        'No credit card required',
+        'Results in 30 seconds',
+        'MLS-ready output',
+      ],
+      videoLabel: 'See Renderly in action',
     },
     footer: {
       tagline: 'AI-powered virtual staging for real estate professionals.',
       copyright: '\u00a9 2026 Renderly. All rights reserved.',
+      productLabel: 'Product',
+      companyLabel: 'Company',
+      links: {
+        features: 'Features',
+        pricing: 'Pricing',
+        faq: 'FAQ',
+        about: 'About',
+        contact: 'Contact',
+        login: 'Login',
+      },
+      privacyLink: 'Privacy Policy',
+      termsLink: 'Terms of Service',
     },
   },
   es: {
@@ -340,7 +526,10 @@ export const copy: Record<Lang, CopySection> = {
       text: 'Early Access: 50% de descuento en todos los planes. Lugares limitados.',
       cta: 'Obtener Descuento',
     },
-    nav: { cta: 'Empieza Gratis' },
+    nav: {
+      cta: 'Empieza Gratis',
+      links: { features: 'Funcionalidades', pricing: 'Precios', faq: 'FAQ' },
+    },
     hero: {
       titleTop: 'Virtual Staging con IA',
       titleBottom: 'desde $19.99 por Propiedad',
@@ -416,9 +605,51 @@ export const copy: Record<Lang, CopySection> = {
         },
       ],
     },
+    features: {
+      badge: 'Funcionalidades',
+      items: [
+        {
+          title: 'Virtual Staging',
+          titleHighlight: 'con IA',
+          description: 'Transforma habitaciones vac\u00edas en espacios bellamente amueblados con IA fotorrealista en menos de 30 segundos.',
+          image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb3?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Biblioteca de',
+          titleHighlight: 'Estilos',
+          description: 'Elige entre 5,000+ activos 3D curados. Moderno, escandinavo, mid-century y cada est\u00e9tica cubierta.',
+          image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Listo para',
+          titleHighlight: 'MLS',
+          description: 'Im\u00e1genes de alta resoluci\u00f3n optimizadas para listados MLS, redes sociales y materiales de marketing.',
+          image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Tours en',
+          titleHighlight: 'Video',
+          description: 'Genera recorridos cinem\u00e1ticos de propiedades desde tus fotos amuebladas. Hasta 24 segundos en calidad 4K.',
+          image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Branding',
+          titleHighlight: 'Personalizado',
+          description: 'Agrega tu logo y colores de marca a cada imagen amueblada. Presentaci\u00f3n profesional para cada listado.',
+          image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&auto=format&fit=crop',
+        },
+        {
+          title: 'Procesamiento',
+          titleHighlight: 'por Lotes',
+          description: 'Amuebla propiedades enteras de una vez. Sube m\u00faltiples habitaciones y obt\u00e9n todos los resultados en un solo lote.',
+          image: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=600&q=80&auto=format&fit=crop',
+        },
+      ],
+    },
     howItWorks: {
       title: 'C\u00f3mo Funciona',
       subtitle: 'Tres pasos. Eso es todo.',
+      stepPrefix: 'Paso',
       steps: [
         {
           step: '01',
@@ -445,6 +676,68 @@ export const copy: Record<Lang, CopySection> = {
       subtitle:
         'Mira c\u00f3mo Renderly transforma una habitaci\u00f3n vac\u00eda en un espacio bellamente amueblado en segundos.',
     },
+    testimonials: {
+      heading: 'Confianza de 2,000+ agentes y propietarios',
+      ratingLabel: '/5 Calificaci\u00f3n',
+      items: [
+        {
+          name: 'Sarah Mitchell',
+          role: 'Agente Inmobiliaria, RE/MAX',
+          avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+          text: 'Renderly redujo mis costos de staging en un 90%. Sol\u00eda gastar $3,000 por listado en staging f\u00edsico. Ahora obtengo mejores fotos por $29.99. Mis propiedades se venden en la mitad del tiempo.',
+          rating: 5,
+        },
+        {
+          name: 'Marcus Chen',
+          role: 'Broker, Coldwell Banker',
+          avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+          text: 'La IA entiende la iluminaci\u00f3n y las sombras como nunca hab\u00eda visto. Los compradores literalmente no pueden distinguir entre nuestro staging virtual y fotos reales.',
+          rating: 5,
+        },
+        {
+          name: 'Emily Rodriguez',
+          role: 'Administradora de Propiedades',
+          avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+          text: 'Administrar 40+ unidades de alquiler hace que el staging sea imposible. Con Renderly, amueblo cada unidad vacante en minutos. Las tasas de vacancia bajaron un 35% desde que empezamos a usarlo.',
+          rating: 5,
+        },
+        {
+          name: 'David Park',
+          role: 'Agente Inmobiliario, Keller Williams',
+          avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
+          text: 'Los tours en video son revolucionarios. Env\u00edo videos de 8 segundos a compradores potenciales y recibo 3 veces m\u00e1s solicitudes de visita que solo con fotos est\u00e1ticas.',
+          rating: 5,
+        },
+        {
+          name: 'Jessica Thompson',
+          role: 'Propietaria, Winnipeg',
+          avatar: 'https://randomuser.me/api/portraits/women/22.jpg',
+          text: 'Vendiendo sin agente y ahorrando miles con staging virtual. El estilo escandinavo que eleg\u00ed recibi\u00f3 muchos elogios durante las visitas. Se vendi\u00f3 por encima del precio pedido.',
+          rating: 5,
+        },
+        {
+          name: 'Robert Williams',
+          role: 'Agente Comercial, CBRE',
+          avatar: 'https://randomuser.me/api/portraits/men/52.jpg',
+          text: 'Usamos Renderly para propiedades comerciales tambi\u00e9n. Salas de conferencias, lobbies, oficinas abiertas. La IA lo maneja todo. El procesamiento por lotes nos ahorra horas cada semana.',
+          rating: 5,
+        },
+        {
+          name: 'Amanda Foster',
+          role: 'Dise\u00f1adora de Interiores y Agente',
+          avatar: 'https://randomuser.me/api/portraits/women/35.jpg',
+          text: 'Como dise\u00f1adora, era esc\u00e9ptica. Pero la calidad de los activos 3D y la precisi\u00f3n de la iluminaci\u00f3n me impresionaron genuinamente. Ahora lo recomiendo a todos mis clientes agentes.',
+          rating: 5,
+        },
+        {
+          name: 'Michael Torres',
+          role: 'Inversionista Inmobiliario',
+          avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
+          text: 'Flipear casas requiere rapidez. Renderly me permite listar propiedades antes de completar las renovaciones. Amueblo la visi\u00f3n del "despu\u00e9s" y atraigo compradores antes.',
+          rating: 5,
+        },
+      ],
+    },
     earlyAccess: {
       title: '\u00danete al Early Access',
       description:
@@ -461,6 +754,14 @@ export const copy: Record<Lang, CopySection> = {
     },
     faq: {
       title: 'Preguntas Frecuentes',
+      badge: 'FAQ',
+      subtitle: 'Todo lo que necesitas saber sobre Renderly',
+      contactCta: '\u00bfTienes m\u00e1s preguntas? Cont\u00e1ctanos',
+      tabs: [
+        { id: 'general', label: 'General' },
+        { id: 'pricing', label: 'Precios' },
+        { id: 'technical', label: 'T\u00e9cnico' },
+      ],
       items: [
         {
           question: '\u00bfQu\u00e9 es el virtual staging?',
@@ -504,6 +805,8 @@ export const copy: Record<Lang, CopySection> = {
       title: 'Elige Tu Plan',
       subtitle:
         'Transforma propiedades vac\u00edas en espacios impresionantes. Sin suscripciones para la mayor\u00eda de planes. Paga una vez, \u00fasalo siempre.',
+      popularBadge: 'M\u00e1s Popular',
+      featuresIncluded: 'Funcionalidades incluidas',
       plans: [
         {
           name: 'Gratis',
@@ -574,11 +877,29 @@ export const copy: Record<Lang, CopySection> = {
         'Las propiedades con staging virtual se venden 30% m\u00e1s r\u00e1pido y por 5-10% m\u00e1s. Empieza a transformar tus propiedades hoy.',
       cta: 'Prueba Gratis',
       secondaryCta: 'Ver Demo',
+      trustItems: [
+        'Sin tarjeta de cr\u00e9dito',
+        'Resultados en 30 segundos',
+        'Im\u00e1genes listas para sitios m\u00e1s populares',
+      ],
+      videoLabel: 'Mira Renderly en acci\u00f3n',
     },
     footer: {
       tagline:
         'Virtual staging con IA para agentes inmobiliarios, propietarios y arrendadores.',
       copyright: '\u00a9 2026 Renderly. Todos los derechos reservados.',
+      productLabel: 'Producto',
+      companyLabel: 'Empresa',
+      links: {
+        features: 'Funcionalidades',
+        pricing: 'Precios',
+        faq: 'FAQ',
+        about: 'Nosotros',
+        contact: 'Contacto',
+        login: 'Iniciar Sesi\u00f3n',
+      },
+      privacyLink: 'Pol\u00edtica de Privacidad',
+      termsLink: 'T\u00e9rminos de Servicio',
     },
   },
 }

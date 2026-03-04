@@ -20,16 +20,22 @@ interface PricingSectionProps {
   title: string
   subtitle: string
   plans: PricingPlan[]
+  popularBadge: string
+  featuresIncluded: string
 }
 
 function PricingCard({
   plan,
   index,
   isInView,
+  popularBadge,
+  featuresIncluded,
 }: {
   plan: PricingPlan
   index: number
   isInView: boolean
+  popularBadge: string
+  featuresIncluded: string
 }) {
   const cardRef = useRef<HTMLDivElement>(null)
   const mouseX = useMotionValue(0)
@@ -83,7 +89,7 @@ function PricingCard({
       {plan.popular && (
         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
           <span className="whitespace-nowrap rounded-full bg-[var(--cta)] px-4 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-[var(--cta)]/20">
-            Most Popular
+            {popularBadge}
           </span>
         </div>
       )}
@@ -111,7 +117,7 @@ function PricingCard({
       {/* Feature progress bar */}
       <div className="relative mt-6">
         <div className="mb-2 flex justify-between">
-          <span className="font-body text-xs text-white/30">Features included</span>
+          <span className="font-body text-xs text-white/30">{featuresIncluded}</span>
           <span className="font-body text-xs text-white/50">
             {includedCount}/{totalFeatures}
           </span>
@@ -168,7 +174,7 @@ function PricingCard({
   )
 }
 
-export function PricingSection({ badge, title, subtitle, plans }: PricingSectionProps) {
+export function PricingSection({ badge, title, subtitle, plans, popularBadge, featuresIncluded }: PricingSectionProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-60px' })
 
@@ -208,7 +214,7 @@ export function PricingSection({ badge, title, subtitle, plans }: PricingSection
         {/* Cards Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan, i) => (
-            <PricingCard key={plan.name} plan={plan} index={i} isInView={isInView} />
+            <PricingCard key={plan.name} plan={plan} index={i} isInView={isInView} popularBadge={popularBadge} featuresIncluded={featuresIncluded} />
           ))}
         </div>
       </div>

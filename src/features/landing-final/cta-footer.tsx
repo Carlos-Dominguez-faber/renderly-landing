@@ -9,23 +9,31 @@ interface CtaFinalProps {
   subtitle: string
   cta: string
   secondaryCta: string
+  trustItems: string[]
+  videoLabel: string
 }
 
 interface FooterProps {
   tagline: string
   copyright: string
+  productLabel: string
+  companyLabel: string
+  links: {
+    features: string
+    pricing: string
+    faq: string
+    about: string
+    contact: string
+    login: string
+  }
+  privacyLink: string
+  termsLink: string
 }
 
 const VIDEO_THUMBNAIL =
   'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1280&q=80&auto=format&fit=crop'
 
-const TRUST_ITEMS = [
-  'No credit card required',
-  'Results in 30 seconds',
-  'MLS-ready output',
-]
-
-export function CtaFinalSection({ title, subtitle, cta, secondaryCta }: CtaFinalProps) {
+export function CtaFinalSection({ title, subtitle, cta, secondaryCta, trustItems, videoLabel }: CtaFinalProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-60px' })
 
@@ -71,7 +79,7 @@ export function CtaFinalSection({ title, subtitle, cta, secondaryCta }: CtaFinal
 
             {/* Trust indicators */}
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
-              {TRUST_ITEMS.map((item, i) => (
+              {trustItems.map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
                   <span className="font-body text-sm text-white/50">{item}</span>
@@ -109,7 +117,7 @@ export function CtaFinalSection({ title, subtitle, cta, secondaryCta }: CtaFinal
 
               {/* Bottom label */}
               <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-black/60 px-4 py-2.5 backdrop-blur-sm">
-                <p className="font-body text-xs text-white/50">See Renderly in action</p>
+                <p className="font-body text-xs text-white/50">{videoLabel}</p>
                 <p className="font-display text-sm font-semibold text-white">{secondaryCta}</p>
               </div>
             </div>
@@ -120,7 +128,7 @@ export function CtaFinalSection({ title, subtitle, cta, secondaryCta }: CtaFinal
   )
 }
 
-export function Footer({ tagline, copyright }: FooterProps) {
+export function Footer({ tagline, copyright, productLabel, companyLabel, links, privacyLink, termsLink }: FooterProps) {
   return (
     <footer className="border-t border-white/[0.06] bg-[var(--bg-dark)] py-12">
       <div className="mx-auto max-w-7xl px-6">
@@ -135,30 +143,30 @@ export function Footer({ tagline, copyright }: FooterProps) {
           <div className="flex gap-8">
             <div className="flex flex-col gap-2">
               <span className="font-body text-xs font-semibold uppercase tracking-wider text-white/30">
-                Product
+                {productLabel}
               </span>
               <a
                 href="#features"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
-                Features
+                {links.features}
               </a>
               <a
                 href="#pricing"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
-                Pricing
+                {links.pricing}
               </a>
               <a
                 href="#faq"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
-                FAQ
+                {links.faq}
               </a>
             </div>
             <div className="flex flex-col gap-2">
               <span className="font-body text-xs font-semibold uppercase tracking-wider text-white/30">
-                Company
+                {companyLabel}
               </span>
               <a
                 href="https://systemizemybiz.agency"
@@ -166,19 +174,19 @@ export function Footer({ tagline, copyright }: FooterProps) {
                 rel="noopener noreferrer"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
-                About
+                {links.about}
               </a>
               <a
                 href="/contact"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
-                Contact
+                {links.contact}
               </a>
               <a
                 href="/login"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
-                Login
+                {links.login}
               </a>
             </div>
           </div>
@@ -192,13 +200,13 @@ export function Footer({ tagline, copyright }: FooterProps) {
               href="/legal/privacy-policy"
               className="font-body text-xs text-white/30 transition-colors hover:text-white/50"
             >
-              Privacy Policy
+              {privacyLink}
             </a>
             <a
               href="/legal/terms-of-service"
               className="font-body text-xs text-white/30 transition-colors hover:text-white/50"
             >
-              Terms of Service
+              {termsLink}
             </a>
           </div>
         </div>

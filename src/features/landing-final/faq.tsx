@@ -12,13 +12,17 @@ interface FaqItem {
 interface FaqSectionProps {
   title: string
   items: FaqItem[]
+  badge: string
+  subtitle: string
+  contactCta: string
+  tabs: Array<{ id: string; label: string }>
 }
 
-const TABS = [
-  { id: 'general', label: 'General', icon: HelpCircle },
-  { id: 'pricing', label: 'Pricing', icon: DollarSign },
-  { id: 'technical', label: 'Technical', icon: Cpu },
-]
+const TAB_ICONS: Record<string, typeof HelpCircle> = {
+  general: HelpCircle,
+  pricing: DollarSign,
+  technical: Cpu,
+}
 
 function BlurredStagger({ text }: { text: string }) {
   const container = {
@@ -55,7 +59,7 @@ function BlurredStagger({ text }: { text: string }) {
   )
 }
 
-export function FaqSection({ title, items }: FaqSectionProps) {
+export function FaqSection({ title, items, badge, subtitle, contactCta, tabs }: FaqSectionProps) {
   const [activeTab, setActiveTab] = useState('general')
   const [openItem, setOpenItem] = useState<number | null>(0)
   const ref = useRef(null)
@@ -89,14 +93,14 @@ export function FaqSection({ title, items }: FaqSectionProps) {
             >
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.04] px-4 py-2 font-body text-sm font-medium text-white/60">
                 <HelpCircle className="h-4 w-4 text-cta" />
-                FAQ
+                {badge}
               </div>
 
               <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 {title}
               </h2>
               <p className="mt-4 font-body text-base text-[var(--text-secondary)]">
-                Everything you need to know about Renderly
+                {subtitle}
               </p>
 
               {/* Contact link */}
@@ -105,7 +109,7 @@ export function FaqSection({ title, items }: FaqSectionProps) {
                 className="mt-6 inline-flex items-center gap-2 font-body text-sm font-medium text-cta transition-colors hover:text-cta-hover"
               >
                 <MessageCircle className="h-4 w-4" />
-                Still have questions? Contact us
+                {contactCta}
               </a>
             </motion.div>
           </div>
@@ -119,8 +123,8 @@ export function FaqSection({ title, items }: FaqSectionProps) {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mb-6 flex gap-2"
             >
-              {TABS.map((tab) => {
-                const Icon = tab.icon
+              {tabs.map((tab) => {
+                const Icon = TAB_ICONS[tab.id] || HelpCircle
                 return (
                   <button
                     key={tab.id}

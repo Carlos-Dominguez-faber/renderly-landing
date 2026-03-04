@@ -14,6 +14,7 @@ interface HowItWorksProps {
   title: string
   subtitle: string
   steps: Step[]
+  stepPrefix: string
 }
 
 const STEP_IMAGES = [
@@ -24,7 +25,7 @@ const STEP_IMAGES = [
 
 const STEP_ICONS = [Upload, Palette, Download]
 
-export function HowItWorksSection({ title, subtitle, steps }: HowItWorksProps) {
+export function HowItWorksSection({ title, subtitle, steps, stepPrefix }: HowItWorksProps) {
   const [activeStep, setActiveStep] = useState(0)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-60px' })
@@ -109,7 +110,7 @@ export function HowItWorksSection({ title, subtitle, steps }: HowItWorksProps) {
                       <span className={`font-body text-xs font-semibold uppercase tracking-wider transition-colors ${
                         activeStep === i ? 'text-cta' : 'text-white/30'
                       }`}>
-                        Step {step.step}
+                        {stepPrefix} {step.step}
                       </span>
                       <h3 className={`mt-1 font-display text-lg font-bold transition-colors ${
                         activeStep === i ? 'text-white' : 'text-white/50'
@@ -155,7 +156,7 @@ export function HowItWorksSection({ title, subtitle, steps }: HowItWorksProps) {
               {/* Mobile step info */}
               <div className="p-5 md:hidden">
                 <span className="font-body text-xs font-semibold uppercase tracking-wider text-cta">
-                  Step {steps[activeStep]?.step}
+                  {stepPrefix} {steps[activeStep]?.step}
                 </span>
                 <h3 className="mt-1 font-display text-lg font-bold text-white">
                   {steps[activeStep]?.title}

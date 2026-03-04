@@ -61,7 +61,7 @@ export function CtaFinalSection({ title, subtitle, cta, secondaryCta }: CtaFinal
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="#"
+                href="/signup"
                 className="group flex items-center gap-2 rounded-lg bg-cta px-7 py-3.5 font-display text-base font-semibold text-white transition-all hover:bg-cta-hover hover:shadow-xl hover:shadow-cta/25 active:scale-[0.97]"
               >
                 {cta}
@@ -161,7 +161,9 @@ export function Footer({ tagline, copyright }: FooterProps) {
                 Company
               </span>
               <a
-                href="#"
+                href="https://systemizemybiz.agency"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
                 About
@@ -173,10 +175,16 @@ export function Footer({ tagline, copyright }: FooterProps) {
                 Blog
               </a>
               <a
-                href="#"
+                href="/contact"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
                 Contact
+              </a>
+              <a
+                href="/login"
+                className="font-body text-sm text-white/50 transition-colors hover:text-white"
+              >
+                Login
               </a>
             </div>
           </div>
@@ -187,13 +195,13 @@ export function Footer({ tagline, copyright }: FooterProps) {
           <p className="font-body text-xs text-white/30">{copyright}</p>
           <div className="flex gap-6">
             <a
-              href="#"
+              href="/legal/privacy-policy"
               className="font-body text-xs text-white/30 transition-colors hover:text-white/50"
             >
               Privacy Policy
             </a>
             <a
-              href="#"
+              href="/legal/terms-of-service"
               className="font-body text-xs text-white/30 transition-colors hover:text-white/50"
             >
               Terms of Service

@@ -72,8 +72,6 @@ body {
   50% { transform: translateY(-8px); }
 }
 
-/* ─── V2 (Creativo) animations ─── */
-
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px rgba(255,107,74,0.3), 0 0 60px rgba(255,107,74,0.1); }
   50% { box-shadow: 0 0 30px rgba(255,107,74,0.5), 0 0 80px rgba(255,107,74,0.2); }
@@ -95,49 +93,7 @@ body {
   100% { transform: translateX(0); }
 }
 
-/* ─── V3 (Disruptivo) animations ─── */
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes marquee-right {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-33.333%); }
-}
-
-@keyframes marquee-left {
-  0% { transform: translateX(-33.333%); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes cta-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(255,107,74,0.2), 0 0 60px rgba(255,107,74,0.06); }
-  50% { box-shadow: 0 0 30px rgba(255,107,74,0.35), 0 0 80px rgba(255,107,74,0.12); }
-}
-
 /* ─── Utility classes ─── */
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.7s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
 
 .animate-gradient-shift {
   background-size: 200% 200%;
@@ -150,72 +106,6 @@ body {
 
 .animate-marquee-reverse {
   animation: marquee-reverse 40s linear infinite;
-}
-
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
-
-/* ─── Scroll reveal (V3) ─── */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ─── FAQ accordion (V3) ─── */
-
-.faq-answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-out;
-}
-
-.faq-answer.open {
-  grid-template-rows: 1fr;
-}
-
-.faq-answer > div {
-  overflow: hidden;
-}
-
-/* ─── Marquee containers (V3) ─── */
-
-.marquee-container {
-  overflow: hidden;
-  width: 100%;
-}
-
-.marquee-track {
-  display: flex;
-  gap: 1.25rem;
-  width: max-content;
-}
-
-.marquee-right {
-  animation: marquee-right 40s linear infinite;
-}
-
-.marquee-left {
-  animation: marquee-left 45s linear infinite;
-}
-
-.marquee-container:hover .marquee-track {
-  animation-play-state: paused;
-}
-
-/* ─── CTA pulse (V3) ─── */
-
-.cta-pulse {
-  animation: cta-glow 3s ease-in-out infinite;
 }
 
 /* ─── Dot grid pattern ─── */
@@ -263,22 +153,3 @@ body {
   background: rgba(255,255,255,0.2);
 }
 
-/* ─── Accordion ─── */
-
-@keyframes accordion-down {
-  from { height: 0; }
-  to { height: var(--radix-accordion-content-height); }
-}
-
-@keyframes accordion-up {
-  from { height: var(--radix-accordion-content-height); }
-  to { height: 0; }
-}
-
-.animate-accordion-down {
-  animation: accordion-down 0.2s ease-out;
-}
-
-.animate-accordion-up {
-  animation: accordion-up 0.2s ease-out;
-}

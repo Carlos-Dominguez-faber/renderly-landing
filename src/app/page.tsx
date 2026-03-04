@@ -34,6 +34,12 @@ export default function Home() {
         >
           V3 — Disruptivo
         </Link>
+        <Link
+          href="/final"
+          className="rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/10 px-8 py-4 text-white transition-all hover:bg-[var(--primary)]/20"
+        >
+          Final — Cherry Pick
+        </Link>
       </div>
     </main>
   )

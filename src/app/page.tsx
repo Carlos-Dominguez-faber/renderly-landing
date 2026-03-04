@@ -9,7 +9,13 @@ export default function Home() {
       <p className="text-lg text-white/60">
         Select a variant to preview
       </p>
-      <div className="flex gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
+        <Link
+          href="/original"
+          className="rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-white transition-all hover:bg-white/10"
+        >
+          Original
+        </Link>
         <Link
           href="/v1"
           className="rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-white transition-all hover:bg-white/10"

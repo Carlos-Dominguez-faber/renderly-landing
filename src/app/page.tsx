@@ -1,5 +1,34 @@
-import { LandingPage } from '@/features/landing/landing-page'
+import Link from 'next/link'
 
 export default function Home() {
-  return <LandingPage />
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center gap-8 bg-[var(--bg-dark)] p-8">
+      <h1 className="font-display text-4xl font-bold text-white">
+        Renderly — Landing Page Variants
+      </h1>
+      <p className="text-lg text-white/60">
+        Select a variant to preview
+      </p>
+      <div className="flex gap-6">
+        <Link
+          href="/v1"
+          className="rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-white transition-all hover:bg-white/10"
+        >
+          V1 — Literal
+        </Link>
+        <Link
+          href="/v2"
+          className="rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-white transition-all hover:bg-white/10"
+        >
+          V2 — Creativo
+        </Link>
+        <Link
+          href="/v3"
+          className="rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-white transition-all hover:bg-white/10"
+        >
+          V3 — Disruptivo
+        </Link>
+      </div>
+    </main>
+  )
 }

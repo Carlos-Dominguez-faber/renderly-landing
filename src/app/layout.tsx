@@ -160,7 +160,7 @@ const faqSchema = {
       name: 'How does AI virtual staging work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Upload a photo of any empty room, choose from dozens of design styles (Modern, Scandinavian, Mid-Century, etc.), and Renderly\'s AI renders photorealistic furniture with accurate lighting and shadows in under 30 seconds. No design skills needed.',
+        text: "Upload a photo of any empty room, choose from dozens of design styles (Modern, Scandinavian, Mid-Century, etc.), and Renderly's AI renders photorealistic furniture with accurate lighting and shadows in under 30 seconds. No design skills needed.",
       },
     },
     {
@@ -168,7 +168,7 @@ const faqSchema = {
       name: 'Virtual staging vs traditional staging — which is better?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Traditional physical staging costs $2,000–$5,000 per property and takes weeks to coordinate. Virtual staging starts at $19.99 per property and delivers results in minutes. Both help listings sell faster, but virtual staging is 95% cheaper and infinitely faster.',
+        text: 'Traditional physical staging costs $2,000-$5,000 per property and takes weeks to coordinate. Virtual staging starts at $19.99 per property and delivers results in minutes. Both help listings sell faster, but virtual staging is 95% cheaper and infinitely faster.',
       },
     },
     {

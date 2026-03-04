@@ -10,6 +10,8 @@ const config: Config = {
         dark: '#08090D',
         light: '#FAFBFC',
         subtle: '#F3F4F6',
+        surface: '#12131F',
+        'surface-alt': '#1A1B2E',
         background: '#08090D',
         foreground: '#ffffff',
         primary: {

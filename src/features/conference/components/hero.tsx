@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 const CTA_URL =
-  'https://app.renderly.com/signup?plan=tier3&promo=CONFERENCE2026&campaign=conference'
+  'https://app.renderly.space/signup?plan=tier3&promo=CONFERENCE2026&campaign=conference'
 
 const TRUST_ITEMS = [
   'No charge for 30 days',

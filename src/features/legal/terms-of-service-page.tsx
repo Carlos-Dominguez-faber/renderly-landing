@@ -14,10 +14,10 @@ export function TermsOfServicePage() {
           platform operated by SystemizMyBiz Agency. Please read these terms carefully before
           creating an account or using the platform. By accessing Renderly at{' '}
           <a
-            href="https://renderly.systemizemybiz.com"
+            href="https://renderly.space"
             className="text-white underline underline-offset-2 hover:text-[var(--primary-light)] transition-colors"
           >
-            renderly.systemizemybiz.com
+            renderly.space
           </a>
           , you confirm that you have read, understood, and agree to be bound by these Terms of
           Service. If you do not agree, do not use the platform.

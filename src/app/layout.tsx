@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans, DM_Sans } from 'next/font/google'
 import { Agentation } from 'agentation'
 import './globals.css'
 
-const SITE_URL = 'https://renderly.systemizemybiz.com'
+const SITE_URL = 'https://renderly.space'
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],

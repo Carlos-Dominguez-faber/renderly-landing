@@ -5,6 +5,8 @@ import { motion, useInView, useMotionValue, useTransform, useSpring } from 'fram
 import { DollarSign, Check, X, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
+const PLAN_IDS = ['free', 'tier1', 'tier2', 'tier3'] as const
+
 interface PricingPlan {
   name: string
   description: string
@@ -159,7 +161,8 @@ function PricingCard({
       </ul>
 
       {/* CTA */}
-      <button
+      <a
+        href={`/signup?plan=${PLAN_IDS[index]}`}
         className={cn(
           'relative mt-8 flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3 font-body text-sm font-semibold transition-all',
           plan.popular
@@ -169,7 +172,7 @@ function PricingCard({
       >
         {plan.cta}
         <ArrowRight className="h-4 w-4" />
-      </button>
+      </a>
     </motion.div>
   )
 }

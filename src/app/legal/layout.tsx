@@ -8,9 +8,12 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <Link
             href="/"
-            className="font-display text-lg font-bold tracking-tight text-white transition-opacity hover:opacity-80"
+            className="flex items-center gap-2 transition-opacity hover:opacity-80"
           >
-            Renderly
+            <img src="/logo.svg" alt="Renderly" className="h-7 w-7" />
+            <span className="font-display text-lg font-bold tracking-tight text-white">
+              Renderly
+            </span>
           </Link>
           <Link
             href="/"

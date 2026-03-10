@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const SITE_URL = 'https://renderly.systemizemybiz.com'
+const SITE_URL = 'https://renderly.space'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

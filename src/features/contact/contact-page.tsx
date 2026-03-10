@@ -76,11 +76,16 @@ function ContactNavbar() {
           {/* Logo */}
           <Link
             href="/"
-            className={`font-display text-lg font-bold tracking-tight transition-colors duration-500 ${
-              scrolled ? 'text-[var(--text-dark)]' : 'text-white'
-            }`}
+            className="flex items-center gap-2"
           >
-            Renderly
+            <img src="/logo.svg" alt="Renderly" className="h-7 w-7" />
+            <span
+              className={`font-display text-lg font-bold tracking-tight transition-colors duration-500 ${
+                scrolled ? 'text-[var(--text-dark)]' : 'text-white'
+              }`}
+            >
+              Renderly
+            </span>
           </Link>
 
           {/* Back to Home */}

@@ -30,10 +30,9 @@ interface FooterProps {
   termsLink: string
 }
 
-const VIDEO_THUMBNAIL =
-  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1280&q=80&auto=format&fit=crop'
-
 export function CtaFinalSection({ title, subtitle, cta, secondaryCta, trustItems, videoLabel }: CtaFinalProps) {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-60px' })
 
@@ -69,7 +68,7 @@ export function CtaFinalSection({ title, subtitle, cta, secondaryCta, trustItems
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="/signup"
+                href="/signup?plan=tier2"
                 className="group flex items-center gap-2 rounded-lg bg-cta px-7 py-3.5 font-display text-base font-semibold text-white transition-all hover:bg-cta-hover hover:shadow-xl hover:shadow-cta/25 active:scale-[0.97]"
               >
                 {cta}
@@ -99,27 +98,39 @@ export function CtaFinalSection({ title, subtitle, cta, secondaryCta, trustItems
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-cta/10 via-primary/10 to-cta/10 blur-3xl" />
 
             <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] shadow-2xl shadow-black/40">
-              <img
-                src={VIDEO_THUMBNAIL}
-                alt="Renderly AI virtual staging demo video"
+              <video
+                ref={videoRef}
+                poster="/demo-poster.svg"
+                playsInline
                 className="aspect-[4/3] w-full object-cover"
-              />
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                onEnded={() => setIsPlaying(false)}
+                controls={isPlaying}
+              >
+                <source src="/demo-video.mp4" type="video/mp4" />
+              </video>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                <button
-                  aria-label={secondaryCta}
-                  className="group flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all hover:scale-110 hover:bg-white/20"
-                >
-                  <Play className="ml-1 h-8 w-8 text-white" fill="white" />
-                </button>
-              </div>
+              {/* Play overlay — hidden while playing */}
+              {!isPlaying && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                  <button
+                    aria-label={secondaryCta}
+                    onClick={() => videoRef.current?.play()}
+                    className="group flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all hover:scale-110 hover:bg-white/20"
+                  >
+                    <Play className="ml-1 h-8 w-8 text-white" fill="white" />
+                  </button>
+                </div>
+              )}
 
-              {/* Bottom label */}
-              <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-black/60 px-4 py-2.5 backdrop-blur-sm">
-                <p className="font-body text-xs text-white/50">{videoLabel}</p>
-                <p className="font-display text-sm font-semibold text-white">{secondaryCta}</p>
-              </div>
+              {/* Bottom label — hidden while playing */}
+              {!isPlaying && (
+                <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-black/60 px-4 py-2.5 backdrop-blur-sm">
+                  <p className="font-body text-xs text-white/50">{videoLabel}</p>
+                  <p className="font-display text-sm font-semibold text-white">{secondaryCta}</p>
+                </div>
+              )}
             </div>
           </motion.div>
         </div>
@@ -135,7 +146,10 @@ export function Footer({ tagline, copyright, productLabel, companyLabel, links, 
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* Logo + tagline */}
           <div>
-            <span className="font-display text-lg font-bold text-white">Renderly</span>
+            <a href="/" className="flex items-center gap-2">
+              <img src="/logo.svg" alt="Renderly" className="h-7 w-7" />
+              <span className="font-display text-lg font-bold text-white">Renderly</span>
+            </a>
             <p className="mt-2 max-w-xs font-body text-sm text-white/40">{tagline}</p>
           </div>
 

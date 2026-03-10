@@ -102,13 +102,16 @@ export function Navbar({
 
         <div className="relative flex items-center justify-between px-6 py-3">
           {/* Logo */}
-          <span
-            className={`font-display text-lg font-bold tracking-tight transition-colors duration-500 ${
-              scrolled ? 'text-[var(--text-dark)]' : 'text-white'
-            }`}
-          >
-            Renderly
-          </span>
+          <a href="/" className="flex items-center gap-2">
+            <img src="/logo.svg" alt="Renderly" className="h-7 w-7" />
+            <span
+              className={`font-display text-lg font-bold tracking-tight transition-colors duration-500 ${
+                scrolled ? 'text-[var(--text-dark)]' : 'text-white'
+              }`}
+            >
+              Renderly
+            </span>
+          </a>
 
           {/* Nav links - center */}
           <div className="hidden items-center gap-8 md:flex">

@@ -14,10 +14,10 @@ export function PrivacyPolicyPage() {
           Policy describes how we collect, use, store, and protect your personal information when you
           visit our website at{' '}
           <a
-            href="https://renderly.systemizemybiz.com"
+            href="https://renderly.space"
             className="text-white underline underline-offset-2 hover:text-[var(--primary-light)] transition-colors"
           >
-            renderly.systemizemybiz.com
+            renderly.space
           </a>{' '}
           or use our AI virtual staging platform. By using Renderly, you agree to the practices
           described in this policy.

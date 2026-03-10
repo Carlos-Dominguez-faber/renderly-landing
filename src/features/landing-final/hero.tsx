@@ -14,9 +14,6 @@ interface HeroProps {
   socialProof: { rating: string; count: string }
 }
 
-const PRODUCT_SCREENSHOT =
-  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1280&q=80&auto=format&fit=crop'
-
 const avatars = [
   'https://randomuser.me/api/portraits/women/44.jpg',
   'https://randomuser.me/api/portraits/men/32.jpg',
@@ -139,11 +136,16 @@ export function HeroSection({
           <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-cta/10 via-primary/10 to-cta/10 blur-3xl" />
 
           <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] shadow-2xl shadow-black/40">
-            <img
-              src={PRODUCT_SCREENSHOT}
-              alt="Renderly AI virtual staging product interface"
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/video-poster.svg"
               className="w-full object-cover"
-            />
+            >
+              <source src="/hero-demo.mp4" type="video/mp4" />
+            </video>
 
             {/* Bottom gradient fade */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />

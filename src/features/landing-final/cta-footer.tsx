@@ -68,7 +68,7 @@ export function CtaFinalSection({ title, subtitle, cta, secondaryCta, trustItems
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="/signup?plan=tier2"
+                href="https://app.renderly.space/signup?plan=tier2"
                 className="group flex items-center gap-2 rounded-lg bg-cta px-7 py-3.5 font-display text-base font-semibold text-white transition-all hover:bg-cta-hover hover:shadow-xl hover:shadow-cta/25 active:scale-[0.97]"
               >
                 {cta}
@@ -197,7 +197,7 @@ export function Footer({ tagline, copyright, productLabel, companyLabel, links, 
                 {links.contact}
               </a>
               <a
-                href="/login"
+                href="https://app.renderly.space/login"
                 className="font-body text-sm text-white/50 transition-colors hover:text-white"
               >
                 {links.login}

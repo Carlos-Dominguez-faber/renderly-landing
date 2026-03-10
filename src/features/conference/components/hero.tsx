@@ -8,7 +8,7 @@ const CTA_URL =
   'https://app.renderly.com/signup?plan=tier3&promo=CONFERENCE2026&campaign=conference'
 
 const TRUST_ITEMS = [
-  'No credit card required',
+  'No charge for 30 days',
   'Cancel anytime',
   'Full Enterprise access',
 ]
@@ -66,8 +66,8 @@ export function ConferenceHero() {
           className="mx-auto mt-6 max-w-xl font-body text-lg leading-relaxed text-[#e8eaed] sm:text-xl"
         >
           Get full Enterprise access to AI virtual staging.{' '}
-          <span className="text-white font-semibold">$0 upfront</span>, no credit card needed.
-          $75/mo starting month 2. Cancel anytime.
+          <span className="text-white font-semibold">$0 upfront</span>, no charge until month 2.
+          $75/mo after that. Cancel anytime.
         </motion.p>
 
         {/* CTA Button */}

@@ -68,7 +68,7 @@ export function CtaFinalSection({ title, subtitle, cta, secondaryCta, trustItems
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="https://app.renderly.space/signup?plan=tier2"
+                href="https://app.renderly.space/signup?plan=free"
                 className="group flex items-center gap-2 rounded-lg bg-cta px-7 py-3.5 font-display text-base font-semibold text-white transition-all hover:bg-cta-hover hover:shadow-xl hover:shadow-cta/25 active:scale-[0.97]"
               >
                 {cta}

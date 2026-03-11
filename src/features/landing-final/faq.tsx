@@ -105,7 +105,7 @@ export function FaqSection({ title, items, badge, subtitle, contactCta, tabs }: 
 
               {/* Contact link */}
               <a
-                href="mailto:hello@renderly.com"
+                href="/contact"
                 className="mt-6 inline-flex items-center gap-2 font-body text-sm font-medium text-cta transition-colors hover:text-cta-hover"
               >
                 <MessageCircle className="h-4 w-4" />

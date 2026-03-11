@@ -5,16 +5,18 @@ import { motion, useInView } from 'framer-motion'
 
 interface BigClaimProps {
   hero: { titleTop: string; titleBottom: string; tagline: string }
-  stats: { items: Array<{ value: number; suffix: string; label: string }> }
+  stats: { items: Array<{ value: number; suffix: string; prefix?: string; label: string }> }
 }
 
 function AnimatedCounter({
   end,
   suffix,
+  prefix = '',
   duration = 2000,
 }: {
   end: number
   suffix: string
+  prefix?: string
   duration?: number
 }) {
   const [count, setCount] = useState(0)
@@ -36,7 +38,7 @@ function AnimatedCounter({
 
   return (
     <span ref={ref}>
-      {count.toLocaleString()}
+      {prefix}{count.toLocaleString()}
       {suffix}
     </span>
   )
@@ -101,6 +103,7 @@ export function BigClaimSection({ hero, stats }: BigClaimProps) {
                 <AnimatedCounter
                   end={stat.value}
                   suffix={stat.suffix}
+                  prefix={stat.prefix}
                   duration={2000 + i * 300}
                 />
               </div>

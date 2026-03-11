@@ -38,7 +38,7 @@ interface CopySection {
     socialProof: { rating: string; count: string }
   }
   stats: {
-    items: Array<{ value: number; suffix: string; label: string }>
+    items: Array<{ value: number; suffix: string; prefix?: string; label: string }>
   }
   bigClaim: {
     badge: string
@@ -144,7 +144,7 @@ export const copy: Record<Lang, CopySection> = {
   en: {
     banner: {
       text: 'Early Access: 50% off all paid plans. Limited spots.',
-      cta: 'Claim Discount',
+      cta: 'Get Started Free',
     },
     nav: {
       cta: 'Get Started Free',
@@ -165,8 +165,8 @@ export const copy: Record<Lang, CopySection> = {
       cta: 'Stage Your First Room Free',
       secondaryCta: 'Watch Demo',
       trustBadges: [
-        'No credit card required',
-        'Pay once, use forever',
+        'Free plan available',
+        'One-time payment per property',
         'Results in 30 seconds',
       ],
       socialProof: {
@@ -177,7 +177,7 @@ export const copy: Record<Lang, CopySection> = {
     stats: {
       items: [
         { value: 73, suffix: '%', label: 'Faster Sales' },
-        { value: 19, suffix: '.99', label: 'Starting Price' },
+        { value: 19, suffix: '.99', prefix: '$', label: 'Starting Price' },
         { value: 95, suffix: '%', label: 'Cost Savings' },
       ],
     },
@@ -232,7 +232,7 @@ export const copy: Record<Lang, CopySection> = {
           title: 'AI Virtual',
           titleHighlight: 'Staging',
           description: 'Transform empty rooms into beautifully furnished spaces with photorealistic AI in under 30 seconds.',
-          image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb3?w=600&q=80&auto=format&fit=crop',
+          image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format&fit=crop',
         },
         {
           title: 'Style',
@@ -244,7 +244,7 @@ export const copy: Record<Lang, CopySection> = {
           title: 'MLS-Ready',
           titleHighlight: 'Output',
           description: 'High-resolution images optimized for MLS listings, social media, and print marketing materials.',
-          image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format&fit=crop',
+          image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop',
         },
         {
           title: 'Video',
@@ -424,7 +424,7 @@ export const copy: Record<Lang, CopySection> = {
       badge: 'Simple Pricing',
       title: 'Choose Your Plan',
       subtitle:
-        'Transform empty properties into stunning spaces. No subscriptions for most plans. Pay once, use forever.',
+        'Transform empty properties into stunning spaces. One-time payment for most plans. Enterprise billed monthly.',
       popularBadge: 'Most Popular',
       featuresIncluded: 'Features included',
       plans: [
@@ -437,7 +437,6 @@ export const copy: Record<Lang, CopySection> = {
           features: [
             { text: '1 staged image per property', included: true },
             { text: '0 property tours (8s 1080p)', included: false },
-            { text: 'Up to 3 regenerations', included: true },
             { text: 'Custom branding & logo', included: false },
             { text: 'Priority support', included: false },
             { text: 'White-label solution', included: false },
@@ -495,10 +494,10 @@ export const copy: Record<Lang, CopySection> = {
       title: 'Ready to Close More Deals?',
       subtitle:
         'Listings with virtual staging sell 30% faster and for 5-10% more. Start transforming your properties today.',
-      cta: 'Claim Free Trial',
+      cta: 'Get Started Free',
       secondaryCta: 'Watch Demo',
       trustItems: [
-        'No credit card required',
+        'Free plan available',
         'Results in 30 seconds',
         'MLS-ready output',
       ],
@@ -524,7 +523,7 @@ export const copy: Record<Lang, CopySection> = {
   es: {
     banner: {
       text: 'Early Access: 50% de descuento en todos los planes. Lugares limitados.',
-      cta: 'Obtener Descuento',
+      cta: 'Comienza Gratis',
     },
     nav: {
       cta: 'Empieza Gratis',
@@ -545,8 +544,8 @@ export const copy: Record<Lang, CopySection> = {
       cta: 'Amuebla Tu Primera Habitaci\u00f3n Gratis',
       secondaryCta: 'Ver Demo',
       trustBadges: [
-        'Sin tarjeta de cr\u00e9dito',
-        'Paga una vez, \u00fasalo siempre',
+        'Plan gratuito disponible',
+        'Pago \u00fanico por propiedad',
         'Resultados en 30 segundos',
       ],
       socialProof: {
@@ -557,7 +556,7 @@ export const copy: Record<Lang, CopySection> = {
     stats: {
       items: [
         { value: 73, suffix: '%', label: 'Ventas M\u00e1s R\u00e1pidas' },
-        { value: 19, suffix: '.99', label: 'Precio Inicial' },
+        { value: 19, suffix: '.99', prefix: '$', label: 'Precio Inicial' },
         { value: 95, suffix: '%', label: 'Ahorro en Costos' },
       ],
     },
@@ -612,7 +611,7 @@ export const copy: Record<Lang, CopySection> = {
           title: 'Virtual Staging',
           titleHighlight: 'con IA',
           description: 'Transforma habitaciones vac\u00edas en espacios bellamente amueblados con IA fotorrealista en menos de 30 segundos.',
-          image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb3?w=600&q=80&auto=format&fit=crop',
+          image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format&fit=crop',
         },
         {
           title: 'Biblioteca de',
@@ -624,7 +623,7 @@ export const copy: Record<Lang, CopySection> = {
           title: 'Listo para',
           titleHighlight: 'MLS',
           description: 'Im\u00e1genes de alta resoluci\u00f3n optimizadas para listados MLS, redes sociales y materiales de marketing.',
-          image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format&fit=crop',
+          image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop',
         },
         {
           title: 'Tours en',
@@ -804,7 +803,7 @@ export const copy: Record<Lang, CopySection> = {
       badge: 'Precios Simples',
       title: 'Elige Tu Plan',
       subtitle:
-        'Transforma propiedades vac\u00edas en espacios impresionantes. Sin suscripciones para la mayor\u00eda de planes. Paga una vez, \u00fasalo siempre.',
+        'Transforma propiedades vac\u00edas en espacios impresionantes. Pago \u00fanico para la mayor\u00eda de planes. Enterprise con facturaci\u00f3n mensual.',
       popularBadge: 'M\u00e1s Popular',
       featuresIncluded: 'Funcionalidades incluidas',
       plans: [
@@ -817,7 +816,6 @@ export const copy: Record<Lang, CopySection> = {
           features: [
             { text: '1 imagen staging por propiedad', included: true },
             { text: '0 tours de propiedad (8s 1080p)', included: false },
-            { text: 'Hasta 3 regeneraciones', included: true },
             { text: 'Branding y logo personalizado', included: false },
             { text: 'Soporte prioritario', included: false },
             { text: 'Soluci\u00f3n marca blanca', included: false },
@@ -875,12 +873,12 @@ export const copy: Record<Lang, CopySection> = {
       title: '\u00bfListo para Cerrar M\u00e1s Ventas?',
       subtitle:
         'Las propiedades con staging virtual se venden 30% m\u00e1s r\u00e1pido y por 5-10% m\u00e1s. Empieza a transformar tus propiedades hoy.',
-      cta: 'Prueba Gratis',
+      cta: 'Comienza Gratis',
       secondaryCta: 'Ver Demo',
       trustItems: [
-        'Sin tarjeta de cr\u00e9dito',
+        'Plan gratuito disponible',
         'Resultados en 30 segundos',
-        'Im\u00e1genes listas para sitios m\u00e1s populares',
+        'Im\u00e1genes listas para MLS',
       ],
       videoLabel: 'Mira Renderly en acci\u00f3n',
     },

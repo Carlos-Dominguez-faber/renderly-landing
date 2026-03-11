@@ -28,6 +28,7 @@ export function FinalLandingPage() {
     const browserLang = navigator.language?.toLowerCase()
     if (browserLang?.startsWith('es')) {
       setLang('es')
+      localStorage.setItem(LANG_KEY, 'es')
     }
   }, [])
 

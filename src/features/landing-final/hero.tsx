@@ -1,8 +1,8 @@
 'use client'
 
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { ArrowRight, Star } from 'lucide-react'
+import { useState, useRef, useCallback } from 'react'
+import { motion, AnimatePresence, useInView } from 'framer-motion'
+import { ArrowRight, Star, Play } from 'lucide-react'
 
 interface HeroProps {
   badge: string
@@ -21,16 +21,42 @@ const avatars = [
   'https://randomuser.me/api/portraits/men/75.jpg',
 ]
 
+const HERO_VIDEO_URL =
+  'https://assets.cdn.filesafe.space/bfilCH1kUaWjdh22WREh/media/69b172bf78565a5c1938e9c1.mp4'
+
 export function HeroSection({
   badge,
   headline,
   headlineHighlight,
   subtitle,
   cta,
+  secondaryCta,
   socialProof,
 }: HeroProps) {
   const ref = useRef(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const isInView = useInView(ref, { once: true })
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [glowVisible, setGlowVisible] = useState(true)
+
+  const handlePlay = useCallback(() => {
+    const video = videoRef.current
+    if (!video) return
+    video.play()
+    setIsPlaying(true)
+    // Fade out the glow over 800ms (CSS transition handles the visual)
+    setGlowVisible(false)
+  }, [])
+
+  const handlePause = useCallback(() => {
+    setIsPlaying(false)
+    setGlowVisible(true)
+  }, [])
+
+  const handleEnded = useCallback(() => {
+    setIsPlaying(false)
+    setGlowVisible(true)
+  }, [])
 
   return (
     <section
@@ -125,30 +151,90 @@ export function HeroSection({
           </motion.div>
         </div>
 
-        {/* Product screenshot — 25% bigger: max-w-6xl, mt-20 md:mt-24 */}
+        {/* ─── Video Player ─── Sandcastles-inspired with neon coral glow ─── */}
         <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.97 }}
           animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
           transition={{ duration: 0.7, delay: 0.65 }}
           className="relative mx-auto mt-20 max-w-6xl md:mt-24"
         >
-          {/* Glow behind screenshot */}
-          <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-cta/10 via-primary/10 to-cta/10 blur-3xl" />
+          {/* ── Neon coral glow layers ── */}
+          {/* Outer diffuse glow */}
+          <div
+            className="pointer-events-none absolute -inset-8 rounded-[2rem] transition-opacity duration-[800ms] ease-out"
+            style={{
+              background:
+                'radial-gradient(50% 55% at 50% 55%, rgba(255,107,74,0.18) 0%, rgba(255,107,74,0) 100%)',
+              opacity: glowVisible ? 1 : 0,
+            }}
+          />
+          {/* Mid glow ring */}
+          <div
+            className="pointer-events-none absolute -inset-4 rounded-3xl transition-opacity duration-[800ms] ease-out"
+            style={{
+              background:
+                'radial-gradient(50% 60% at 50% 55%, rgba(255,107,74,0.12) 0%, rgba(255,107,74,0) 100%)',
+              boxShadow: '0 0 80px 20px rgba(255,107,74,0.08)',
+              opacity: glowVisible ? 1 : 0,
+            }}
+          />
+          {/* Tight border glow */}
+          <div
+            className="pointer-events-none absolute -inset-[2px] rounded-[18px] transition-opacity duration-[800ms] ease-out"
+            style={{
+              boxShadow:
+                '0 0 30px 4px rgba(255,107,74,0.25), 0 0 60px 10px rgba(255,107,74,0.12), inset 0 0 20px 2px rgba(255,107,74,0.06)',
+              opacity: glowVisible ? 1 : 0,
+            }}
+          />
 
+          {/* Video container */}
           <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] shadow-2xl shadow-black/40">
             <video
-              autoPlay
-              muted
-              loop
+              ref={videoRef}
+              poster="/renderly-hero-thumbnail.webp"
               playsInline
-              poster="/video-poster.svg"
-              className="w-full object-cover"
+              controls={isPlaying}
+              onPause={handlePause}
+              onEnded={handleEnded}
+              className="aspect-video w-full object-cover"
             >
-              <source src="/hero-demo.mp4" type="video/mp4" />
+              <source src={HERO_VIDEO_URL} type="video/mp4" />
             </video>
 
-            {/* Bottom gradient fade */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />
+            {/* Play overlay — visible when not playing */}
+            <AnimatePresence>
+              {!isPlaying && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/30"
+                  onClick={handlePlay}
+                >
+                  {/* Pulsing ring behind play button */}
+                  <div className="absolute h-28 w-28 animate-pulse rounded-full bg-cta/10 sm:h-32 sm:w-32" />
+                  <button
+                    aria-label={secondaryCta}
+                    className="group relative z-10 flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all hover:scale-110 hover:border-cta/40 hover:bg-cta/20 sm:h-24 sm:w-24"
+                  >
+                    <Play
+                      className="ml-1 h-8 w-8 text-white transition-transform group-hover:scale-110 sm:h-10 sm:w-10"
+                      fill="white"
+                    />
+                  </button>
+
+                  {/* Bottom label */}
+                  <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-black/60 px-4 py-2.5 backdrop-blur-sm sm:bottom-6 sm:left-6 sm:right-6">
+                    <p className="font-body text-xs text-white/50">{badge}</p>
+                    <p className="font-display text-sm font-semibold text-white sm:text-base">
+                      {secondaryCta}
+                    </p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </motion.div>
       </div>

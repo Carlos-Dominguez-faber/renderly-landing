@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react'
 import { type Lang, copy } from './copy'
-import { Banner, Navbar } from './navbar'
+import { Navbar } from './navbar'
 import { HeroSection } from './hero'
 import { FeaturesCarousel } from './features-carousel'
 import { HowItWorksSection } from './how-it-works'
@@ -16,7 +16,6 @@ const LANG_KEY = 'renderly-lang'
 
 export function FinalLandingPage() {
   const [lang, setLang] = useState<Lang>('en')
-  const [bannerVisible, setBannerVisible] = useState(true)
   const t = copy[lang]
 
   useEffect(() => {
@@ -42,19 +41,12 @@ export function FinalLandingPage() {
 
   return (
     <>
-      {bannerVisible && (
-        <Banner
-          text={t.banner.text}
-          cta={t.banner.cta}
-          onClose={() => setBannerVisible(false)}
-        />
-      )}
       <Navbar
         lang={lang}
         onToggleLang={toggleLang}
         ctaText={t.nav.cta}
         navLinks={t.nav.links}
-        bannerVisible={bannerVisible}
+        bannerVisible={false}
       />
       <HeroSection
         badge={t.heroContent.badge}

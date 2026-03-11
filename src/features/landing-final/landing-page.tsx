@@ -92,7 +92,6 @@ export function FinalLandingPage() {
         contactCta={t.faq.contactCta}
         tabs={t.faq.tabs}
       />
-      {/* TODO: Re-enable CTA video section after video edit is done
       <CtaFinalSection
         title={t.ctaFinal.title}
         subtitle={t.ctaFinal.subtitle}
@@ -101,7 +100,6 @@ export function FinalLandingPage() {
         trustItems={t.ctaFinal.trustItems}
         videoLabel={t.ctaFinal.videoLabel}
       />
-      */}
       <Footer
         tagline={t.footer.tagline}
         copyright={t.footer.copyright}

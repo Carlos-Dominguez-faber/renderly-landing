@@ -5,6 +5,15 @@ const nextConfig: NextConfig = {
   experimental: {
     mcpServer: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/conference',
+        destination: 'https://app.renderly.space/promo/conference',
+        permanent: false,
+      },
+    ]
+  },
 }
 
 export default nextConfig

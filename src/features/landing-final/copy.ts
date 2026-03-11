@@ -436,6 +436,7 @@ export const copy: Record<Lang, CopySection> = {
           cta: 'Get Started',
           features: [
             { text: '1 staged image per property', included: true },
+            { text: 'Up to 3 regenerations', included: true },
             { text: '0 property tours (8s 1080p)', included: false },
             { text: 'Custom branding & logo', included: false },
             { text: 'Priority support', included: false },
@@ -815,6 +816,7 @@ export const copy: Record<Lang, CopySection> = {
           cta: 'Comenzar',
           features: [
             { text: '1 imagen staging por propiedad', included: true },
+            { text: 'Hasta 3 regeneraciones', included: true },
             { text: '0 tours de propiedad (8s 1080p)', included: false },
             { text: 'Branding y logo personalizado', included: false },
             { text: 'Soporte prioritario', included: false },

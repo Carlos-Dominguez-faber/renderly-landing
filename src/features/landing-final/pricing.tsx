@@ -162,7 +162,7 @@ function PricingCard({
 
       {/* CTA */}
       <a
-        href={`https://app.renderly.space/signup?plan=${PLAN_IDS[index]}`}
+        href={`https://app.renderly.space/get-started?plan=${PLAN_IDS[index]}`}
         className={cn(
           'relative mt-8 flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3 font-body text-sm font-semibold transition-all',
           plan.popular

@@ -433,7 +433,7 @@ export const copy: Record<Lang, CopySection> = {
           description: 'Try out the platform',
           price: '$0',
           priceNote: 'No credit card required',
-          cta: 'Get Started',
+          cta: 'Try It Free',
           features: [
             { text: '1 property', included: true },
             { text: '1 staged image per property', included: true },
@@ -449,7 +449,7 @@ export const copy: Record<Lang, CopySection> = {
           description: 'Perfect for single listings',
           price: '$19.99',
           priceNote: 'One-time payment',
-          cta: 'Get Started',
+          cta: 'Stage My Listing',
           features: [
             { text: '1 property', included: true },
             { text: '3 staged images per property', included: true },
@@ -466,7 +466,7 @@ export const copy: Record<Lang, CopySection> = {
           price: '$29.99',
           priceNote: 'One-time payment',
           popular: true,
-          cta: 'Get Started',
+          cta: 'Stage My Listings',
           features: [
             { text: '3 properties', included: true },
             { text: '9 staged images per property', included: true },
@@ -482,7 +482,7 @@ export const copy: Record<Lang, CopySection> = {
           description: 'Unlimited properties',
           price: '$75',
           priceNote: 'Cancel anytime',
-          cta: 'Get Started',
+          cta: 'Subscribe to Unlimited',
           features: [
             { text: 'Unlimited properties', included: true },
             { text: '9 staged images per property', included: true },
@@ -817,7 +817,7 @@ export const copy: Record<Lang, CopySection> = {
           description: 'Prueba la plataforma',
           price: '$0',
           priceNote: 'Sin tarjeta de cr\u00e9dito',
-          cta: 'Comenzar',
+          cta: 'Prueba Gratis',
           features: [
             { text: '1 propiedad', included: true },
             { text: '1 imagen staging por propiedad', included: true },
@@ -833,7 +833,7 @@ export const copy: Record<Lang, CopySection> = {
           description: 'Perfecto para listados individuales',
           price: '$19.99',
           priceNote: 'Pago \u00fanico',
-          cta: 'Comenzar',
+          cta: 'Amueblar Ahora',
           features: [
             { text: '1 propiedad', included: true },
             { text: '3 im\u00e1genes staging por propiedad', included: true },
@@ -850,7 +850,7 @@ export const copy: Record<Lang, CopySection> = {
           price: '$29.99',
           priceNote: 'Pago \u00fanico',
           popular: true,
-          cta: 'Comenzar',
+          cta: 'Amueblar mis Propiedades',
           features: [
             { text: '3 propiedades', included: true },
             { text: '9 im\u00e1genes staging por propiedad', included: true },
@@ -866,7 +866,7 @@ export const copy: Record<Lang, CopySection> = {
           description: 'Propiedades ilimitadas',
           price: '$75',
           priceNote: 'Cancela cuando quieras',
-          cta: 'Comenzar',
+          cta: 'Suscr\u00edbete a Unlimited',
           features: [
             { text: 'Propiedades ilimitadas', included: true },
             { text: '9 im\u00e1genes staging por propiedad', included: true },
